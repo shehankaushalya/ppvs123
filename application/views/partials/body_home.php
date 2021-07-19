@@ -394,7 +394,7 @@ display:none;
    
             <div class="">
          <a href="../Home/PpvsHome"><img class="main-logo" style="margin-left:40px"
-                        src="<?php echo base_url(); ?>assets/new/img/logo/1logo.jpg" alt="" /></a>
+                        src="<?php echo base_url(); ?>assets/new/img/logo/logo.jpg" alt="" /></a>
                
             </div>
 
