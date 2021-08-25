@@ -121,7 +121,7 @@
             <div class="sparkline13-hd">
                 <div class="main-sparkline13-hd">
 
-                <div class="row" style="margin-top: 60px">
+                <div class="row" style="margin-top: 50px">
 
 
                     <div class="col-lg-4 col-md-4 col-sm-3 col-xs-3" id="logo">
