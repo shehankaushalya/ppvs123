@@ -84,7 +84,7 @@ class Progress extends CI_Controller
             redirect('Progress/progressView');
         } else {
 
-            $config['allowed_types'] = 'jpg|jpeg|png'; 
+            $config['allowed_types'] = 'gif|jpg|png|jpeg|pdf'; 
             $config['upload_path'] = './uploads/images/'; 
             $this->load->library('upload',$config);
 
