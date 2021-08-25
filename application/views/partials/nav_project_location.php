@@ -647,7 +647,7 @@ $(function() {
                                             } ?>
                                          <tr>
                                              <th data-field="lcode">Location Code</th>
-                                             <th data-field="lname">Location Name (Stockpile)</th>
+                                             <th data-field="lname">Location Name</th>
                                              <th data-field="remark">Remark</th>
                                              <th data-field="project">Project Code</th>
 
