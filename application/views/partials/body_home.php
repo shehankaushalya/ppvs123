@@ -239,7 +239,7 @@ input[type="search"] {
 	}
 	.dropdown-menu-right {
     right: 100px;
-    left: auto;
+    left: -75px;
 	}
 }
 
