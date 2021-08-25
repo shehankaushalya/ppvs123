@@ -157,7 +157,7 @@
                     
                 </div>
 
-                <div class="row" style="margin-top: 50px">
+                <div class="row" style="margin-top: 25px">
 
                     <!-- <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
                         <h3 style="color:#337ab7;"><center>Project</center></h3>
