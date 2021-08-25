@@ -89,6 +89,38 @@
                             </div>
                         </div>
 
+                        <div class="form-group-inner">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                    <label class="login2">Status</label>
+                                </div>
+                                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+
+                                <select class="js-example-basic-multiple" style="color:#337ab7; border:1px solid #ddd;" 
+                                    onchange="document.getElementById('D_E_Status').value=this.options[this.selectedIndex].text; 
+                                    document.getElementById('idValue').value=this.options[this.selectedIndex].value;">
+                                        <option value="-1"></option>
+                                        <option>Not_Yet_Started
+                                                                                             </option>
+                                                                                             <option>Initiated
+                                                                                             </option>
+                                                                                             <option>Work_In_Progress
+                                                                                             </option>
+                                                                                             <option>Completed
+                                                                                             </option>
+                                                                                             <option>Hold
+                                                                                             </option>
+
+
+                                    </select>
+                                    <input class="form-control" name="Status" id="D_E_Status" 
+                                    style="position:absolute;top:0px;width:240px;width:180px\9;#width:180px; border:1px solid #ddd; border-right:0;" 
+                                    onfocus="this.select()" type="text" readonly required>
+
+                                </div>
+                            </div>
+                        </div>
+
 
 
                         <div class="login-btn-inner dropup">

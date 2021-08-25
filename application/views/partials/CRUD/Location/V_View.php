@@ -50,6 +50,19 @@
                         </div>
                     </div>
 
+
+                    <div class="form-group-inner">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                <label class="login2">Status</label>
+                            </div>
+                            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                                <input type="text" class="form-control" 
+                                    id="V_V_Status" readonly />
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="login-btn-inner">
                         <div class="row">
                             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">

@@ -18,6 +18,7 @@ class Location extends CI_Controller
         $this->form_validation->set_rules('locationcode', 'locationcode', 'required|is_unique[locationsubmaster.LocationCode]');
         $this->form_validation->set_rules('description', 'description');
         $this->form_validation->set_rules('projectname', 'projectname', 'required');
+        $this->form_validation->set_rules('status', 'status', 'required');
 
         if ($this->form_validation->run() == false) {
             redirect('Location/locationView');
@@ -85,8 +86,9 @@ class Location extends CI_Controller
         $Description = $this->input->post('Description');
         $ProjectName = $this->input->post('ProjectName');
         $ProjectCode = $this->input->post('ProjectCode');
+        $Status = $this->input->post('Status');
         $this->load->model('Model_location');
-        $this->Model_location->update_records($LocationCode, $Location, $Description, $ProjectCode);
+        $this->Model_location->update_records($LocationCode, $Location, $Description, $ProjectCode, $Status);
         $this->session->set_flashdata('msg', 'Data updated successfully.');
         redirect('Location/locationView');
     }

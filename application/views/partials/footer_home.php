@@ -958,16 +958,22 @@ $(function() {
             locationcode: {
                 select: true,
             },
-            status: {
+            // status: {
+            //     required: true,
+            // },
+            photoitem: {
                 required: true,
             },
-            photoitem: {
+            workside: {
                 required: true,
             },
             image: {
                 required: true,
             },
             imgdate: {
+                required: true,
+            },
+            remark: {
                 required: true,
             }
 
@@ -980,21 +986,29 @@ $(function() {
                 remote: '<span style="color:red">PPD Code already exits</span>'
             },
             
-            status: {
-                required: '<span style="color:red" >Please enter Status</span>',
-                remote: '<span style="color:red">Please enter a valid status</span>'
-            },
+            // status: {
+            //     required: '<span style="color:red" >Please enter Status</span>',
+            //     remote: '<span style="color:red">Please enter a valid status</span>'
+            // },
             photoitem: {
                 required: '<span style="color:red" >Please select Photo Item</span>',
                 remote: '<span style="color:red">Please select a valid Photo Item</span>'
+            },
+            workside: {
+                required: '<span style="color:red" >Please select Working Side</span>',
+                remote: '<span style="color:red">Please select a valid Working Side</span>'
             },
             image: {
                 required: '<span style="color:red" >Please upload an Image</span>',
                 remote: '<span style="color:red">Please upload an Image</span>'
             },
             imgdate: {
-                required: '<span style="color:red" >Please enter Image Date</span>',
-                remote: '<span style="color:red">Please enter a valid Image Date</span>'
+                required: '<span style="color:red" >Please select Image Date</span>',
+                remote: '<span style="color:red">Please select a valid Image Date</span>'
+            },
+            remark: {
+                required: '<span style="color:red" >Please enter Remark</span>',
+                remote: '<span style="color:red">Please enter a valid Remark</span>'
             }
 
 
@@ -1024,10 +1038,13 @@ $(function() {
                 required: true
 
             },
-            Status: {
+            // Status: {
+            //     required: true,
+            // },
+            PhotoItem: {
                 required: true,
             },
-            PhotoItem: {
+            WorkSide: {
                 required: true,
             },
             Image: {
@@ -1036,7 +1053,10 @@ $(function() {
             ImgDate: {
                 required: true,
 
-            }
+            },
+            Remark: {
+                required: true,
+            },
 
 
 
@@ -1058,18 +1078,24 @@ $(function() {
             LocationCode: {
                 required: '<span style="color:red">Please select Location Code</span>',
             },
-            Status: {
-                required: '<span style="color:red">Please enter Status</span>'
-            },
+            // Status: {
+            //     required: '<span style="color:red">Please enter Status</span>'
+            // },
             PhotoItem: {
                 required: '<span style="color:red">Please select Photo Item</span>'
+            },
+            WorkSide: {
+                required: '<span style="color:red">Please select Working Side</span>'
             },
             Image: {
                 required: '<span style="color:red">Please upload an Image</span>'
             },
             ImgDate: {
-                required: '<span style="color:red">Please enter Image Date</span>'
-            }
+                required: '<span style="color:red">Please select Image Date</span>'
+            },
+            Remark: {
+                required: '<span style="color:red">Please enter Remark</span>'
+            },
 
         },
 
@@ -1097,10 +1123,13 @@ $(function() {
                 required: true
 
             },
-            Status: {
+            // Status: {
+            //     required: true,
+            // },
+            PhotoItem: {
                 required: true,
             },
-            PhotoItem: {
+            WorkSide: {
                 required: true,
             },
             Image: {
@@ -1109,7 +1138,10 @@ $(function() {
             ImgDate: {
                 required: true,
 
-            }
+            },
+            Remark: {
+                required: true,
+            },
 
 
 
@@ -1130,18 +1162,24 @@ $(function() {
             LocationCode: {
                 required: '<span style="color:red">Please select Location Code</span>',
             },
-            Status: {
-                required: '<span style="color:red">Please enter Status</span>'
-            },
+            // Status: {
+            //     required: '<span style="color:red">Please enter Status</span>'
+            // },
             PhotoItem: {
                 required: '<span style="color:red">Please select Photo Item</span>'
+            },
+            WorkSide: {
+                required: '<span style="color:red">Please select Working Side</span>'
             },
             Image: {
                 required: '<span style="color:red">Please upload an Image</span>'
             },
             ImgDate: {
-                required: '<span style="color:red">Please enter Image Date</span>'
-            }
+                required: '<span style="color:red">Please select Image Date</span>'
+            },
+            Remark: {
+                required: '<span style="color:red">Please enter Remark</span>'
+            },
 
         },
 
@@ -1169,10 +1207,13 @@ $(function() {
                 required: true
 
             },
-            Status: {
+            // Status: {
+            //     required: true,
+            // },
+            PhotoItem: {
                 required: true,
             },
-            PhotoItem: {
+            WorkSide: {
                 required: true,
             },
             Image: {
@@ -1181,7 +1222,10 @@ $(function() {
             ImgDate: {
                 required: true,
 
-            }
+            },
+            Remark: {
+                required: true,
+            },
 
         },
 
@@ -1198,18 +1242,24 @@ $(function() {
             LocationCode: {
                 required: '<span style="color:red">Please select Location Code</span>',
             },
-            Status: {
-                required: '<span style="color:red">Please enter Status</span>'
-            },
+            // Status: {
+            //     required: '<span style="color:red">Please enter Status</span>'
+            // },
             PhotoItem: {
                 required: '<span style="color:red">Please select Photo Item</span>'
+            },
+            WorkSide: {
+                required: '<span style="color:red">Please select Working Side</span>'
             },
             Image: {
                 required: '<span style="color:red">Please upload an Image</span>'
             },
             ImgDate: {
-                required: '<span style="color:red">Please enter Image Date</span>'
-            }
+                required: '<span style="color:red">Please select Image Date</span>'
+            },
+            Remark: {
+                required: '<span style="color:red">Please enter Remark</span>'
+            },
 
         },
 
@@ -1253,6 +1303,13 @@ $(function() {
             projectcode: {
                 select: true,
             },
+            status: {
+                required: true,
+            },
+            description: {
+                required: true,
+                noSpace: true,
+            },
         },
 
         messages: {
@@ -1262,7 +1319,15 @@ $(function() {
             locationcode: {
                 required: '<span style="color:red">Please enter location code</span>',
                 remote: '<span style="color:red">Location code already exits</span>'
-            }
+            },
+            status: {
+                required: '<span style="color:red" >Please enter Status</span>',
+                remote: '<span style="color:red">Please enter a valid status</span>'
+            },
+            description: {
+                required: '<span style="color:red" >Please enter Remark</span>',
+                remote: '<span style="color:red">Please enter a valid remark</span>'
+            },
         },
 
         errorPlacement: function(error, element) {
@@ -1282,7 +1347,14 @@ $(function() {
             ProjectCode: {
                 select: true,
                 required: true
-            }
+            },
+            Status: {
+                required: true,
+            },
+            Description: {
+                required: true,
+                noSpace: true,
+            },
 
         },
 
@@ -1295,7 +1367,13 @@ $(function() {
             },
             ProjectCode: {
                 required: '<span style="color:red">Please select Project Code</span>'
-            }
+            },
+            Status: {
+                required: '<span style="color:red">Please enter Status</span>'
+            },
+            Description: {
+                required: '<span style="color:red">Please enter Remark</span>'
+            },
 
         },
 
@@ -1316,7 +1394,14 @@ $(function() {
             ProjectCode: {
                 select: true,
                 required: true
-            }
+            },
+            Status: {
+                required: true,
+            },
+            Description: {
+                required: true,
+                noSpace: true,
+            },
 
         },
 
@@ -1329,7 +1414,13 @@ $(function() {
             },
             ProjectCode: {
                 required: '<span style="color:red">Please select Project Code</span>'
-            }
+            },
+            Status: {
+                required: '<span style="color:red">Please enter Status</span>'
+            },
+            Description: {
+                required: '<span style="color:red">Please enter Remark</span>'
+            },
         },
 
         errorPlacement: function(error, element) {
@@ -1349,7 +1440,14 @@ $(function() {
             ProjectCode: {
                 select: true,
                 required: true
-            }
+            },
+            Status: {
+                required: true,
+            },
+            Description: {
+                required: true,
+                noSpace: true,
+            },
 
         },
 
@@ -1362,7 +1460,13 @@ $(function() {
             },
             ProjectCode: {
                 required: '<span style="color:red">Please select Project Code</span>'
-            }
+            },
+            Status: {
+                required: '<span style="color:red">Please enter Status</span>'
+            },
+            Description: {
+                required: '<span style="color:red">Please enter Remark</span>'
+            },
         },
 
         errorPlacement: function(error, element) {

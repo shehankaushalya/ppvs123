@@ -121,7 +121,7 @@
 
 
 
-                        <div class="form-group-inner">
+                        <!-- <div class="form-group-inner">
                             <div class="row">
                                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                     <label class="login2">Status</label>
@@ -132,11 +132,11 @@
                                     onchange="document.getElementById('D_E_Status').value=this.options[this.selectedIndex].text; 
                                     document.getElementById('idValue').value=this.options[this.selectedIndex].value;">
                                         <option value="-1"></option>
-                                        <option>Not Yet Started
+                                        <option>Not_Yet_Started
                                                                                              </option>
                                                                                              <option>Initiated
                                                                                              </option>
-                                                                                             <option>Work In Progress
+                                                                                             <option>Work_In_Progress
                                                                                              </option>
                                                                                              <option>Completed
                                                                                              </option>
@@ -151,7 +151,7 @@
 
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
 
 
                         <div class="form-group-inner">
@@ -172,14 +172,50 @@
                                                                                              </option>
                                                                                              <option>Culvert
                                                                                              </option>
-                                                                                             <option>Embankment
+                                                                                             <option>Retaining_Wall
                                                                                              </option>
-                                                                                             <option>Retaining Wall
+                                                                                             <option>Other
                                                                                              </option>
+                                                                                             
 
 
                                     </select>
                                     <input class="form-control" name="PhotoItem" id="D_E_PhotoItem" 
+                                    style="position:absolute;top:0px;width:240px;width:180px\9;#width:180px; border:1px solid #ddd; border-right:0;" 
+                                    onfocus="this.select()" type="text" readonly required>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="form-group-inner">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                    <label class="login2">Working Side</label>
+                                </div>
+
+
+                                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+
+
+                                    <select class="js-example-basic-multiple" style="color:#337ab7; border:1px solid #ddd;" 
+                                    onchange="document.getElementById('D_E_WorkSide').value=this.options[this.selectedIndex].text; 
+                                    document.getElementById('idValue').value=this.options[this.selectedIndex].value;">
+                                        <option value="-1"></option>
+                                        
+                                                                                             <option>LHS
+                                                                                             </option>
+                                                                                             <option>RHS
+                                                                                             </option>
+                                                                                             <option>None
+                                                                                             </option>
+                                                                                            
+
+
+                                    </select>
+                                    <input class="form-control" name="WorkSide" id="D_E_WorkSide" 
                                     style="position:absolute;top:0px;width:240px;width:180px\9;#width:180px; border:1px solid #ddd; border-right:0;" 
                                     onfocus="this.select()" type="text" readonly required>
 
@@ -220,8 +256,23 @@
                                     <label class="login2">Photo Capturing Date</label>
                                 </div>
                                 <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                                    <input type="text" class="form-control" placeholder="Enter Photo Capturing Date" name="ImgDate"
-                                        id="D_E_ImgDate"  />
+                                    <input type="date" class="form-control" id="D_E_ImgDate" name="ImgDate" />
+
+                                    <!-- <input type="text" class="form-control" placeholder="Enter Photo Capturing Date" name="ImgDate"
+                                        id="D_E_ImgDate"  /> -->
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group-inner">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                    <label class="login2">Remark
+                                    </label>
+                                </div>
+                                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                                    <input type="text" class="form-control" placeholder="Enter Remark" name="Remark" id="D_E_Remark" required />
                                 </div>
                             </div>
                         </div>

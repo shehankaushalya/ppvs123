@@ -41,7 +41,7 @@
   margin-bottom: 15px;
 }
 
-.modal-dialog {
+.modal-dialog1 {
   width: 100%;
   height: 100%;
   margin: 0;
@@ -62,6 +62,44 @@
 }
 
 
+@media(min-width:991px) {
+    #logo {
+        visibility: hidden;
+    }
+    }
+
+
+    @media(max-width:991px) {
+    #logo {
+        visibility: visible;
+    }
+    }
+
+    @media(max-width:767px) {
+    #logo {
+        visibility: visible;
+    }
+    }
+
+    @media(max-width:480px) {
+    #logo {
+        visibility: visible;
+    }
+    }
+
+    @media(max-width:360px) {
+    #logo {
+        visibility: visible;
+    }
+    }
+
+    @media(max-width:320px) {
+    #logo {
+        visibility: visible;
+    }
+    }
+
+
 
 
 
@@ -79,8 +117,12 @@
                                 <div class="basic-login-form-ad">
                                     <div class="row">
                                         <div class="header-top-area" style="background-color:white">
-                                            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+
+                                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
+                                            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                                                <center><h2 style="color:black;text-align: center;">NEM Project Progress Visualization System</h2></center>
                                             </div>
+                                            
                                             <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
                                                 <button type="button" href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="btn btn-link">
                                                     <span class="step"><?php echo $this->session->userdata('name')[0]; ?></span><br></button>
@@ -114,83 +156,188 @@
 
         <div class="sparkline13-list">
 
-    
-<br><br><br><br>
         <div class="main-sparkline13-hd">
 
 
+                <div class="row" style="margin-top: 60px">
 
+                    
+                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" id="logo">
+                    <center>
+                        <img class="main-logo" src="<?php echo base_url(); ?>assets/new/img/logo/logo.jpg" alt="logo.png" style="height:50px" />
+                       
+                    </center>
+                    </div>
+                    
+                    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10" style="font-size: 20px; color:#337ab7;">
+                      <center><b><?php echo($item_code); ?>-<?php echo($project_code); ?>-<?php echo($location_code); ?>-<?php echo($remark); ?> </b></center></div>
+                    
+                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" id="logo">
+                        <center>
+                        <img class="main-logo" src="<?php echo base_url(); ?>assets/new/img/logo/logo.png" alt="logo.png" style="height:50px" />
+                    
+                        </center>
+                    </div>
+                    
+                </div>
+
+                <!-- <div class="row">
+
+                    
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                        <h3 style="color:#337ab7;"><center>Location</center></h3>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="font-size: 18px"><center><b><?php echo($location_code); ?></b></center></div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                    </div>
+                    
+                </div> -->
+
+        <br>      
         <div class="row">
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 thumb">
-                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="CEP 2020 Jan"
-                   data-image="<?php echo base_url(); ?>assets/new/img/01.jpg"
-                   data-target="#image-gallery">
-                    <img class="img-thumbnail"
-                         src="<?php echo base_url(); ?>assets/new/img/01.jpg"
-                         alt="Another alt text">
+            
 
-                    <h5><center><b>CEP 2020 Jan</b></center></h5></a>
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 thumb">
-                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="CEP 2020 Feb"
-                   data-image="<?php echo base_url(); ?>assets/new/img/02.jpg"
-                   data-target="#image-gallery">
-                    <img class="img-thumbnail"
-                         src="<?php echo base_url(); ?>assets/new/img/02.jpg"
-                         alt="Another alt text">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 thumb">
+            <?php
+                            if ($project_image_fetch_data_lhs->num_rows() > 0) {
 
-                    <h5><center><b>CEP 2020 Feb</b></center></h5></a>
-                </a>
-            </div>
-
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 thumb">
-                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="CEP 2020 Mar"
-                   data-image="<?php echo base_url(); ?>assets/new/img/03.jpg"
-                   data-target="#image-gallery">
-                    <img class="img-thumbnail"
-                         src="<?php echo base_url(); ?>assets/new/img/03.jpg"
-                         alt="Another alt text">
-
-                    <h5><center><b>CEP 2020 Mar</b></center></h5></a>
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 thumb">
-                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="CEP 2020 Apr"
-                   data-image="<?php echo base_url(); ?>assets/new/img/04.jpg"
-                   data-target="#image-gallery">
-                    <img class="img-thumbnail"
-                         src="<?php echo base_url(); ?>assets/new/img/04.jpg"
-                         alt="Another alt text">
-
-                    <h5><center><b>CEP 2020 Apr</b></center></h5></a>
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 thumb">
-                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="CEP 2020 May"
-                   data-image="<?php echo base_url(); ?>assets/new/img/05.png"
-                   data-target="#image-gallery">
-                    <img class="img-thumbnail"
-                         src="<?php echo base_url(); ?>assets/new/img/05.png"
-                         alt="Another alt text">
-
-                    <h5><center><b>CEP 2020 May</b></center></h5></a>
-                </a>
-            </div>
+                              ?>
+                              <h4 style="color:#337ab7;"><center><b>LHS</b></center></h4>
+                              <?php
+                                foreach ($project_image_fetch_data_lhs->result() as $row) {
+                                ?>
+                                <?php if ($row->UserName == $this->session->userdata('username')) { ?>
 
 
+                                  <!-- <h4 style="color:#337ab7;"><center><b><?php echo $row->WorkSide ?></b></center></h4> -->
+                                  
 
-        
+                                  <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="<?php echo $row->Remark ?> <?php echo $row->ImgDate ?>"
+                                    data-image="<?php echo $row->Image ?>"
+                                    data-target="#image-gallery">
+
+                                    <img class="img-thumbnail"
+                                    src="<?php echo $row->Image ?>"
+                                    alt="Another alt text">
+
+                                    <br>
+
+                                    <!-- <h5><center><b><?php echo $row->ProjectCode ?> <?php echo $row->LocationCode ?> <?php echo $row->ImgDate ?></b></center></h5></a> -->
+                                    <h5><center><b><?php echo $row->Remark ?> <?php echo $row->ImgDate ?></b></center></h5></a>
+                                    </a>
+            
+                                    
+                                    
+                                
+                                <?php
+                                }
+                                }
+                              
+                            ?>
+
+                    <?php } ?>
+                    </div>
+                    <!-- <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 thumb">
+                              </div> -->
+
+                              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 thumb">
+                            <?php
+                            if ($project_image_fetch_data_rhs->num_rows() > 0) {
+                              ?>
+                              <h4 style="color:#337ab7;"><center><b>RHS</b></center></h4>
+                              <?php
+                                foreach ($project_image_fetch_data_rhs->result() as $row) {
+                                ?>
+                                <?php if ($row->UserName == $this->session->userdata('username')) { ?>
+
+                                  
+                                  <!-- <h4 style="color:#337ab7;"><center><b><?php echo $row->WorkSide ?></b></center></h4> -->
+                                  
+
+                                  <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="<?php echo $row->Remark ?> <?php echo $row->ImgDate ?>"
+                                    data-image="<?php echo $row->Image ?>"
+                                    data-target="#image-gallery">
+
+                                    <img class="img-thumbnail"
+                                    src="<?php echo $row->Image ?>"
+                                    alt="Another alt text">
+
+                                    <br>
+
+                                    <!-- <h5><center><b><?php echo $row->ProjectCode ?> <?php echo $row->LocationCode ?> <?php echo $row->ImgDate ?></b></center></h5></a> -->
+                                    <h5><center><b><?php echo $row->Remark ?> <?php echo $row->ImgDate ?></b></center></h5></a>
+                                    </a>
+            
+                                    
+                                    
+                                
+                                <?php
+                                }
+                                }
+                              
+                            ?>
+
+                    <?php } ?>
+                    </div>
+
+                              </div>
 
 
+                              <div class="row">
+            
+
+            <?php
+                            if ($project_image_fetch_data_none->num_rows() > 0) {
+
+                              ?>
+                              <!-- <h4 style="color:#337ab7;"><center><b>None</b></center></h4> -->
+
+                              <?php
+
+                                foreach ($project_image_fetch_data_none->result() as $row) {
+                                ?>
+                                <?php if ($row->UserName == $this->session->userdata('username')) { ?>
+
+                                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 thumb">
+
+                                  <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="<?php echo $row->ProjectCode ?> <?php echo $row->LocationCode ?> <?php echo $row->ImgDate ?>"
+                                    data-image="<?php echo $row->Image ?>"
+                                    data-target="#image-gallery">
+
+                                    <img class="img-thumbnail"
+                                    src="<?php echo $row->Image ?>"
+                                    alt="Another alt text">
+
+                                    <br>
+
+                                    <h5><center><b><b><?php echo $row->Remark ?> <?php echo $row->ImgDate ?></b></b></center></h5></a>
+                                    </a>
+            
+                                    </div>
+                                
+                                <?php
+                                }
+                                }
+                            } else {
+                            ?>
+
+                    <?php } ?>
 
 
+        </div>
+
+
+        </div>
+
+            
            
 
 
 
         <div class="modal fade" id="image-gallery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
+            <div class="modal-dialog1 modal-lg">
                 <div class="modal-content">
                 <br><br><br><br><br>
                     <div class="modal-header">

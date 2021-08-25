@@ -120,7 +120,7 @@
                 <div class="slide-content">
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-6 col-sm-6">
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                 <div class="slide-article">
                                     <h1 class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s">Welcome to
                                         the Project Progress Visualization System</h1>
@@ -141,7 +141,7 @@
                                 </div>
 
                             </div>
-                            <div class="col-md-6 col-sm-6">
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                 <div class="slider-img wow fadeInUp">
 
                                 </div>

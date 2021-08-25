@@ -238,7 +238,7 @@ $(function() {
                                                                                          <input type="text"
                                                                                              class="form-control"
                                                                                              placeholder="Enter Remark"
-                                                                                             name="description" />
+                                                                                             name="description" id="description1" required />
                                                                                      </div>
                                                                                  </div>
                                                                              </div>
@@ -337,6 +337,46 @@ $(function() {
                                                                                      </div>
                                                                                  </div>
                                                                              </div>
+
+
+                                                                             <div class="form-group-inner">
+                                                                                 <div class="row">
+                                                                                     <div
+                                                                                         class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                                                                         <label class="login2">Status</label>
+                                                                                     </div>
+                                                                                     <div
+                                                                                         class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                                                                                         <select class="form-control"
+                                                                                             id="status1" name="status" >
+                                                                                             
+                                                                                             <option>Not_Yet_Started
+                                                                                             </option>
+                                                                                             <option>Initiated
+                                                                                             </option>
+                                                                                             <option>Work_In_Progress
+                                                                                             </option>
+                                                                                             <option>Completed
+                                                                                             </option>
+                                                                                             <option>Hold
+                                                                                             </option>
+
+                                                                                         </select>
+                                                                                         
+                                                                                     </div>
+                                                                                 </div>
+                                                                             </div>
+
+
+
+
+
+
+
+
+
+
+
                                                                              <div class="login-btn-inner">
 
                                                                                  <div class="row">
@@ -629,7 +669,7 @@ $(function() {
                                  <table id="table" class="table table-striped table-bordered" style="width:100%">
                                      <thead>
                                          <tr>
-                                             <td colspan="4">
+                                             <td colspan="5">
                                                 
                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                        <h4 id="topic" style="color:#337ab7;">Location Details</h4>
@@ -647,9 +687,10 @@ $(function() {
                                             } ?>
                                          <tr>
                                              <th data-field="lcode">Location Code</th>
-                                             <th data-field="lname">Location Name</th>
+                                             <th data-field="lname">Location Name (Stockpile)</th>
                                              <th data-field="remark">Remark</th>
                                              <th data-field="project">Project Code</th>
+                                             <th data-field="Status">Status</th>
 
                                          </tr>
                                      </thead>
@@ -664,6 +705,7 @@ $(function() {
                                              <td><?php echo $row->Location ?></td>
                                              <td><?php echo $row->Description ?></td>
                                              <td><?php echo $row->ProjectCode ?></td>
+                                             <td><?php echo $row->Status ?></td>
 
                                          </tr>
                                          <?php
@@ -674,6 +716,7 @@ $(function() {
                                              <td><?php echo $row->Location ?></td>
                                              <td><?php echo $row->Description  ?></td>
                                              <td><?php echo $row->ProjectCode ?></td>
+                                             <td><?php echo $row->Status ?></td>
 
                                          </tr>
                                          <?php
@@ -683,7 +726,7 @@ $(function() {
                                             } else {
                                                 ?>
                                          <tr>
-                                             <td colspan="3"> No Data Found </td>
+                                             <td colspan="5"> No Data Found </td>
                                          </tr>
                                          <?php
                                             }
@@ -740,42 +783,63 @@ for (var i = 2; i < table.rows.length; i++) {
         document.getElementById("V_V_LocationCode").value = this.cells[0].innerHTML;
         document.getElementById("V_V_Description").value = this.cells[2].innerHTML;
         document.getElementById("V_V_ProjectName").value = this.cells[3].innerHTML;
+        document.getElementById("V_V_Status").value = this.cells[4].innerHTML;
+
+
         document.getElementById("V_E_Location").value = this.cells[1].innerHTML;
         document.getElementById("V_E_LocationCode").value = this.cells[0].innerHTML;
-
         document.getElementById("V_E_Description").value = this.cells[2].innerHTML;
         document.getElementById("V_E_ProjectName").value = this.cells[3].innerHTML;
+        document.getElementById("V_E_Status").value = this.cells[4].innerHTML;
+
+
         document.getElementById("V_D_Location").value = this.cells[1].innerHTML;
         document.getElementById("V_D_LocationCode").value = this.cells[0].innerHTML;
         document.getElementById("V_D_Description").value = this.cells[2].innerHTML;
         document.getElementById("V_D_ProjectName").value = this.cells[3].innerHTML;
+        document.getElementById("V_D_Status").value = this.cells[4].innerHTML;
 
 
         document.getElementById("E_V_Location").value = this.cells[1].innerHTML;
         document.getElementById("E_V_LocationCode").value = this.cells[0].innerHTML;
         document.getElementById("E_V_Description").value = this.cells[2].innerHTML;
         document.getElementById("E_V_ProjectName").value = this.cells[3].innerHTML;
+        document.getElementById("E_V_Status").value = this.cells[4].innerHTML;
+
+
         document.getElementById("E_E_Location").value = this.cells[1].innerHTML;
         document.getElementById("E_E_LocationCode").value = this.cells[0].innerHTML;
         document.getElementById("E_E_Description").value = this.cells[2].innerHTML;
         document.getElementById("E_E_ProjectName").value = this.cells[3].innerHTML;
+        document.getElementById("E_E_Status").value = this.cells[4].innerHTML;
+
+
         document.getElementById("E_D_Location").value = this.cells[1].innerHTML;
         document.getElementById("E_D_LocationCode").value = this.cells[0].innerHTML;
         document.getElementById("E_D_Description").value = this.cells[2].innerHTML;
         document.getElementById("E_D_ProjectName").value = this.cells[3].innerHTML;
+        document.getElementById("E_D_Status").value = this.cells[4].innerHTML;
+
 
         document.getElementById("D_V_Location").value = this.cells[1].innerHTML;
         document.getElementById("D_V_LocationCode").value = this.cells[0].innerHTML;
         document.getElementById("D_V_Description").value = this.cells[2].innerHTML;
         document.getElementById("D_V_ProjectName").value = this.cells[3].innerHTML;
+        document.getElementById("D_V_Status").value = this.cells[4].innerHTML;
+
+
         document.getElementById("D_E_Location").value = this.cells[1].innerHTML;
         document.getElementById("D_E_LocationCode").value = this.cells[0].innerHTML;
         document.getElementById("D_E_Description").value = this.cells[2].innerHTML;
         document.getElementById("D_E_ProjectName").value = this.cells[3].innerHTML;
+        document.getElementById("D_E_Status").value = this.cells[4].innerHTML;
+
+
         document.getElementById("D_D_Location").value = this.cells[1].innerHTML;
         document.getElementById("D_D_LocationCode").value = this.cells[0].innerHTML;
         document.getElementById("D_D_Description").value = this.cells[2].innerHTML;
         document.getElementById("D_D_ProjectName").value = this.cells[3].innerHTML;
+        document.getElementById("D_D_Status").value = this.cells[4].innerHTML;
 
 
     };

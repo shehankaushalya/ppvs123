@@ -12,7 +12,8 @@ class Model_location extends CI_Model
             'LocationCode' => $this->input->post('locationcode', true),
             'Description' => $this->input->post('description', true),
             'ProjectName' => $this->input->post('projectname', true),
-            'ProjectCode' => $this->input->post('projectcode', true)
+            'ProjectCode' => $this->input->post('projectcode', true),
+            'Status' => $this->input->post('status', true),
         );
         return $this->db->insert('locationsubmaster', $data);
     }
@@ -95,9 +96,9 @@ class Model_location extends CI_Model
         return $result;
     }
 
-    public function update_records($LocationCode, $Location, $Description, $ProjectCode)
+    public function update_records($LocationCode, $Location, $Description, $ProjectCode, $Status)
     {
-        $this->db->query("update locationsubmaster set Location='$Location',Description='$Description',ProjectCode='$ProjectCode',ProjectName=(Select ProjectName From projectmaster where ProjectCode = '$ProjectCode')  where LocationCode='$LocationCode' ");
+        $this->db->query("update locationsubmaster set Location='$Location',Description='$Description',ProjectCode='$ProjectCode',ProjectName=(Select ProjectName From projectmaster where ProjectCode = '$ProjectCode'), Status='$Status'  where LocationCode='$LocationCode' ");
     }
 
     public function deletedata($LocationCode)
