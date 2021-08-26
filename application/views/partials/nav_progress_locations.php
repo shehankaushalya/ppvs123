@@ -81,11 +81,11 @@
                                         <div class="header-top-area" style="background-color:white">
                                         
                                             <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
-                                            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                                            <div class="col-lg-8 col-md-8 col-sm-9 col-xs-9">
                                                 <center><h2 style="color:black;text-align: center;">NEM Project Progress Visualization System</h2></center>
                                             </div>
 
-                                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                            <div class="col-lg-2 col-md-2 col-sm-1 col-xs-1">
                                                 <button type="button" href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="btn btn-link">
                                                     <span class="step"><?php echo $this->session->userdata('name')[0]; ?></span><br></button>
                                                 <ul role="menu" class="dropdown-toggle dropdown-menu animated dropdown-menu-right zoomIn">

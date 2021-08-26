@@ -55,7 +55,7 @@ $(function() {
                                  <div class="basic-login-form-ad">
                                      <div class="row">
                                          <div class="header-top-area" style="background-color:white">
-                                             <div class="col-lg-10 col-md-10 col-sm-11 col-xs-10">
+                                             <div class="col-lg-10 col-md-10 col-sm-11 col-xs-11">
                                                  <?php if ($this->session->userdata('UserNew') == "checked") { ?>
                                                  <a class="zoomInDown mg-t" href="#" data-toggle="modal"
                                                      data-target="#zoomInDown1">
@@ -133,7 +133,7 @@ $(function() {
                                                          <br>Refresh</button></a>
 
                                              </div>
-                                             <div class="col-lg-2 col-md-2 col-sm-1 col-xs-2">
+                                             <div class="col-lg-2 col-md-2 col-sm-1 col-xs-1">
                                                  <button type="button" href="#" data-toggle="dropdown" role="button"
                                                      aria-expanded="false" class="btn btn-link">
                                                       <span class="step"><?php echo $this->session->userdata('name')[0]; ?></span><br></button>
