@@ -754,7 +754,7 @@ $(function() {
                                              
                                              <td>
                                              <a style="font-size:12px;color:#337ab7" data-toggle="modal"
-                                                    href="#dispaly-employee" title="View Employee"
+                                                    href="#dispaly-employee" title="View Image"
                                                     class="display-emp ml-1 btn-ext-small btn btn-sm btn-link"
                                                     data-geteid="<?php echo $row->Image ?>"
                                                     rel="noopener noreferrer">View</a>
