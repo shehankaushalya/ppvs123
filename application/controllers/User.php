@@ -15,7 +15,10 @@ class User extends CI_Controller
     {
 
         if ($this->session->userdata('username') != "") {
-            $this->load->view('PpvsHome.php');
+            $this->load->model("Model_progress");
+            $data["project_progress_fetch_data"] = $this->Model_progress->project_progress_fetch_data();
+            $this->load->view('PpvsHome', $data);
+            // $this->load->view('PpvsHome.php');
         } else {
             $this->session->set_flashdata('errmsg', 'Wrong Username or Password');
             redirect('User/Login');
@@ -49,7 +52,10 @@ class User extends CI_Controller
     public function Login()
     {
         if ($this->session->userdata('username') != "") {
-            $this->load->view('PpvsHome.php');
+            $this->load->model("Model_progress");
+            $data["project_progress_fetch_data"] = $this->Model_progress->project_progress_fetch_data();
+            $this->load->view('PpvsHome', $data);
+            // $this->load->view('PpvsHome.php');
         } else {
 
             $this->form_validation->set_rules('username', 'username', 'required');

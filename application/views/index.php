@@ -116,7 +116,7 @@
     <section id="slider">
         <div class="main-slider">
             <div class="single-slide">
-                <img src="<?php echo base_url(); ?>assets/images/Poster.jpg" alt="img">
+                <img src="<?php echo base_url(); ?>assets/images/poster.png" alt="img">
                 <div class="slide-content">
                     <div class="container">
                         <div class="row">
