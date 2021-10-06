@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 13, 2021 at 09:26 AM
+-- Generation Time: Oct 05, 2021 at 06:44 AM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 8.0.3
 
@@ -112,64 +112,8 @@ CREATE TABLE `progressmaster` (
 --
 
 INSERT INTO `progressmaster` (`PpdCode`, `ProjectCode`, `LocationCode`, `PhotoItem`, `WorkSide`, `Image`, `ImgDate`, `Remark`) VALUES
-('CEP-2/PK-C_2021-07-22_14:45:11', 'CEP-2/PK-C', 'CEP-59+100', 'Bridge', '', 'http://localhost/ppvs123//uploads/images/1_-_Copy_-_Copy_-_Copy_-_Copy5.PNG', '2021-07-22', ''),
-('CEP-2/PK-C_2021-07-26_10:08:25', 'CEP-2/PK-C', 'CEP-59+100', 'Bridge', '', 'http://localhost/ppvs123//uploads/images/30cbb88a-03ed-4f50-ab7c-f1894556dd9e1.jpg', '2021-07-26', ''),
-('DEHIATHTHAKANDIYA_2021-07-23_23:05:06', 'DEHIATHTHAKANDIYA', 'CEP-59+195', 'Bridge', '', 'http://localhost/ppvs123//uploads/images/1_-_Copy_-_Copy_-_Copy10.PNG', '2021-07-21', ''),
-('DEHIATHTHAKANDIYA_2021-07-23_23:40:23', 'DEHIATHTHAKANDIYA', 'CEP-59+300', 'Bridge', '', 'http://localhost/ppvs123//uploads/images/1_-_Copy_-_Copy_-_Copy_(2)_-_Copy7.PNG', '2021-07-23', ''),
-('DEHIATHTHAKANDIYA_2021-07-24_00:07:05', 'DEHIATHTHAKANDIYA', 'CEP-59+300', 'Bridge', '', 'http://localhost/ppvs123//uploads/images/1_-_Copy_-_Copy_-_Copy_(2)6.PNG', '2021-07-23', ''),
-('DEHIATHTHAKANDIYA_2021-07-26_10:09:22', 'DEHIATHTHAKANDIYA', 'CEP-59+100', 'Bridge', '', 'http://localhost/ppvs123//uploads/images/7e59dd0f-a361-4ea6-9b5c-998407e58808_(1)2.jpg', '2021-07-26', ''),
-('DEHIATHTHAKANDIYA_2021-07-27_15:16:22', 'DEHIATHTHAKANDIYA', 'Bakmeedeniya_Road', 'Retaining_Wall', '', 'http://localhost/ppvs123//uploads/images/f8300de6-bd45-45ad-a33d-5a0b3f8d2eaa1.jpg', '2021-07-07', ''),
-('DUMMY11_2021-07-22_14:57:25', 'DUMMY11', '00+050_LHS_Haddaththawa_Road', 'Bridge', '', 'http://localhost/ppvs123//uploads/images/1_-_Copy_-_Copy_-_Copy_(2)4.PNG', '2021-07-28', ''),
-('DUMMY1_2021-07-22_14:50:06', 'DUMMY1', '00+050_LHS_Haddaththawa_Road', 'Bridge', '', 'http://localhost/ppvs123//uploads/images/1_-_Copy_-_Copy_-_Copy_(2)_-_Copy3.PNG', '2021-07-27', ''),
-('DUMMY22_2021-07-22_14:57:36', 'DUMMY22', '00+600_LHS_Ranaviru_Road', 'Bridge', '', 'http://localhost/ppvs123//uploads/images/1_-_Copy_-_Copy_-_Copy_-_Copy6.PNG', '2021-07-21', ''),
-('DUMMY2_2021-07-22_14:50:22', 'DUMMY2', '00+600_LHS_Ranaviru_Road', 'Bridge', '', 'http://localhost/ppvs123//uploads/images/1_-_Copy_-_Copy.PNG', '2021-07-14', ''),
-('DUMMY33_2021-07-22_14:57:48', 'DUMMY33', '01+300_RHS_Arawaththa_Road', 'Bridge', '', 'http://localhost/ppvs123//uploads/images/1_-_Copy_-_Copy_-_Copy9.PNG', '2021-07-20', ''),
-('DUMMY3_2021-07-22_14:51:01', 'DUMMY3', '00+600_LHS_Ranaviru_Road', 'Bridge', '', 'http://localhost/ppvs123//uploads/images/1_-_Copy_-_Copy_-_Copy_(2)_-_Copy4.PNG', '2021-08-04', ''),
-('DUMMY44_2021-07-22_14:58:01', 'DUMMY44', '00+600_LHS_Ranaviru_Road', 'Bridge', '', 'http://localhost/ppvs123//uploads/images/1_-_Copy_-_Copy_-_Copy_(2)_-_Copy5.PNG', '2021-07-30', ''),
-('DUMMY4_2021-07-22_14:50:38', 'DUMMY4', '01+300_RHS_Arawaththa_Road', 'Bridge', '', 'http://localhost/ppvs123//uploads/images/1_-_Copy_-_Copy_(2)1.PNG', '2021-07-28', ''),
-('DUMMY4_2021-07-22_14:51:16', 'DUMMY4', '00+600_LHS_Ranaviru_Road', 'Bridge', '', 'http://localhost/ppvs123//uploads/images/1_-_Copy_-_Copy_(2)2.PNG', '2021-07-13', ''),
-('DUMMY55_2021-07-22_14:58:13', 'DUMMY55', '01+300_RHS_Arawaththa_Road', 'Bridge', '', 'http://localhost/ppvs123//uploads/images/1_-_Copy_-_Copy_(2)6.PNG', '2021-07-28', ''),
-('DUMMY55_2021-07-22_14:58:29', 'DUMMY55', '00+600_LHS_Ranaviru_Road', 'Bridge', '', 'http://localhost/ppvs123//uploads/images/1_-_Copy_-_Copy_-_Copy_-_Copy7.PNG', '2021-08-04', ''),
-('DUMMY5_2021-07-22_14:51:27', 'DUMMY5', '00+600_LHS_Ranaviru_Road', 'Bridge', '', 'http://localhost/ppvs123//uploads/images/1_-_Copy_-_Copy_(2)3.PNG', '2021-07-05', ''),
-('DUMMY66_2021-07-22_14:58:42', 'DUMMY66', '04+100_LHS_Gageyaya_Road', 'Bridge', '', 'http://localhost/ppvs123//uploads/images/1_-_Copy_-_Copy_-_Copy_(2)_-_Copy6.PNG', '2021-08-04', ''),
-('DUMMY6_2021-07-22_14:51:41', 'DUMMY6', '00+600_LHS_Ranaviru_Road', 'Bridge', '', 'http://localhost/ppvs123//uploads/images/1_-_Copy_-_Copy1.PNG', '2021-07-12', ''),
-('DUMMY7_2021-07-22_14:51:54', 'DUMMY7', '00+600_LHS_Ranaviru_Road', 'Bridge', '', 'http://localhost/ppvs123//uploads/images/1_-_Copy_-_Copy_(2)4.PNG', '2021-07-19', ''),
-('DUMMY8_2021-07-22_14:52:11', 'DUMMY8', '00+600_LHS_Ranaviru_Road', 'Bridge', '', 'http://localhost/ppvs123//uploads/images/Capture.PNG', '2021-07-26', ''),
-('DUMMY9_2021-07-22_14:52:25', 'DUMMY9', '01+300_RHS_Arawaththa_Road', 'Bridge', '', 'http://localhost/ppvs123//uploads/images/1_-_Copy_-_Copy_(2)5.PNG', '2021-07-28', ''),
-('DUMMY_2021-07-22_12:44:35', 'DUMMY', 'dummy_location', 'Bridge', 'None', 'http://localhost/ppvs123//uploads/images/1_-_Copy_-_Copy_-_Copy_-_Copy4.PNG', '2021-06-09', 'new'),
-('DUMMY_2021-07-22_12:45:07', 'DUMMY', 'dummy_location', 'Bridge', 'LHS', 'http://localhost/ppvs123//uploads/images/1_-_Copy_-_Copy_-_Copy4.PNG', '2021-07-08', 'new'),
-('DUMMY_2021-07-22_13:03:05', 'DUMMY', 'dummy_location', 'Bridge', 'RHS', 'http://localhost/ppvs123//uploads/images/1_-_Copy_-_Copy_-_Copy5.PNG', '2021-07-23', 'first'),
-('DUMMY_2021-07-22_14:38:38', 'DUMMY', 'dummy_location', 'Bridge', 'LHS', 'http://localhost/ppvs123//uploads/images/1_-_Copy_-_Copy_-_Copy_(2)_-_Copy1.PNG', '2021-08-05', 'new'),
-('DUMMY_2021-07-22_14:38:56', 'DUMMY', 'dummy_location', 'Bridge', 'LHS', 'http://localhost/ppvs123//uploads/images/1_-_Copy_-_Copy_-_Copy6.PNG', '2021-06-29', 'new'),
-('DUMMY_2021-07-22_14:39:12', 'DUMMY', 'dummy_location', 'Bridge', 'None', 'http://localhost/ppvs123//uploads/images/1_-_Copy_-_Copy_-_Copy_(2)_-_Copy2.PNG', '2021-07-08', 'first'),
-('DUMMY_2021-07-22_14:39:33', 'DUMMY', 'dummy_location', 'Bridge', 'None', 'http://localhost/ppvs123//uploads/images/12.PNG', '2021-07-19', 'new'),
-('DUMMY_2021-07-22_14:39:58', 'DUMMY', 'dummy_location', 'Bridge', '', 'http://localhost/ppvs123//uploads/images/6.PNG', '2021-07-14', ''),
-('DUMMY_2021-08-05_01:53:23', 'DUMMY', 'dummy_location1', 'Bridge', '', 'http://localhost/ppvs123//uploads/images/f8300de6-bd45-45ad-a33d-5a0b3f8d2eaa2.jpg', '2021-08-05', ''),
-('DUMMY_2021-08-09_01:51:51', 'DUMMY', 'dummy_location1', 'Bridge', 'LHS', 'http://localhost/ppvs123//uploads/images/1_-_Copy_-_Copy_-_Copy_(2)_-_Copy8.PNG', '2021-08-09', 'first'),
-('DUMMY_2021-08-09_01:57:39', 'DUMMY', 'dummy_location1', 'Bridge', 'None', 'http://localhost/ppvs123//uploads/images/1_-_Copy_-_Copy_-_Copy_(2)7.PNG', '2021-08-25', 'first'),
-('DUMMY_2021-08-12_16:10:50', 'DUMMY', 'dummy_location1', 'Bridge', 'RHS', 'http://localhost/ppvs123//uploads/images/30cbb88a-03ed-4f50-ab7c-f1894556dd9e7.jpg', '2021-08-12', 'first'),
-('IROAD_JAFFNA_2021-07-22_14:45:42', 'IROAD_JAFFNA', 'CEP-59+450', 'Bridge', '', 'http://localhost/ppvs123//uploads/images/1_-_Copy_-_Copy_-_Copy_(2).PNG', '2021-07-28', ''),
-('KEKIRAWA_THALAWA_2021-07-24_01:00:04', 'KEKIRAWA_THALAWA', '10+517_LHS_Kekirawa', 'Bridge', 'LHS', 'http://localhost/ppvs123//uploads/images/7e59dd0f-a361-4ea6-9b5c-998407e58808.jpg', '2021-07-24', 'new'),
-('KEKIRAWA_THALAWA_2021-07-24_01:00:22', 'KEKIRAWA_THALAWA', '10+517_LHS_Kekirawa', 'Culvert', 'LHS', 'http://localhost/ppvs123//uploads/images/30cbb88a-03ed-4f50-ab7c-f1894556dd9e.jpg', '2021-07-24', 'first'),
-('KEKIRAWA_THALAWA_2021-07-24_01:00:41', 'KEKIRAWA_THALAWA', '10+517_LHS_Kekirawa', 'Culvert', 'LHS', 'http://localhost/ppvs123//uploads/images/f8300de6-bd45-45ad-a33d-5a0b3f8d2eaa.jpg', '2021-07-24', 'new'),
-('KEKIRAWA_THALAWA_2021-08-06_09:49:57', 'KEKIRAWA_THALAWA', '10+517_LHS_Kekirawa', 'Culvert', 'None', 'http://localhost/ppvs123//uploads/images/1_-_Copy_-_Copy_-_Copy_-_Copy8.PNG', '2021-08-06', 'new'),
-('KIRIMETIYA_2021-07-22_14:46:03', 'KIRIMETIYA', 'CEP-59+300', 'Bridge', '', 'http://localhost/ppvs123//uploads/images/1_-_Copy_-_Copy_-_Copy_(2)1.PNG', '2021-07-27', ''),
-('KULIYAPITIYA_2021-07-22_14:46:24', 'KULIYAPITIYA', 'CEP-59+300', 'Bridge', '', 'http://localhost/ppvs123//uploads/images/6_-_Copy.PNG', '2021-07-22', ''),
-('MAHIYANGANAYA_2021-07-22_14:46:44', 'MAHIYANGANAYA', 'CEP-59+100', 'Bridge', '', 'http://localhost/ppvs123//uploads/images/1_-_Copy_-_Copy_-_Copy_(2)2.PNG', '2021-07-29', ''),
-('NIKAWERATIYA_2021-08-12_09:10:39', 'NIKAWERATIYA', 'nikaweratiyal1', 'Bridge', 'LHS', 'http://localhost/ppvs123//uploads/images/7e59dd0f-a361-4ea6-9b5c-998407e58808_(1)3.jpg', '2021-08-12', 'first'),
-('NIKAWERATIYA_2021-08-12_09:13:32', 'NIKAWERATIYA', 'nikaweratiyal1', 'Bridge', 'LHS', 'http://localhost/ppvs123//uploads/images/30cbb88a-03ed-4f50-ab7c-f1894556dd9e5.jpg', '2021-08-12', 'second'),
-('NIKAWERATIYA_2021-08-12_09:14:59', 'NIKAWERATIYA', 'nikaweratiyal1', 'Bridge', 'RHS', 'http://localhost/ppvs123//uploads/images/f8300de6-bd45-45ad-a33d-5a0b3f8d2eaa3.jpg', '2021-08-12', 'third'),
-('NIKAWERATIYA_2021-08-12_09:22:03', 'NIKAWERATIYA', 'nikaweratiyal2', 'Bridge', 'RHS', 'http://localhost/ppvs123//uploads/images/30cbb88a-03ed-4f50-ab7c-f1894556dd9e6.jpg', '2021-08-12', 'first'),
-('NIKAWERATIYA_2021-08-12_16:18:24', 'NIKAWERATIYA', 'nikaweratiyal2', 'Bridge', 'LHS', 'http://localhost/ppvs123//uploads/images/7e59dd0f-a361-4ea6-9b5c-998407e588082.jpg', '2021-08-12', 'first'),
-('NIKAWERATIYA_2021-08-13_12:08:29', 'NIKAWERATIYA', 'nikaweratiyal1', 'Bridge', 'LHS', 'http://localhost/ppvs123//uploads/images/f8300de6-bd45-45ad-a33d-5a0b3f8d2eaa4.jpg', '2021-08-13', 'second'),
-('NUWARAELIYA_2021-07-22_14:47:06', 'NUWARAELIYA', 'CEP-59+300', 'Bridge', '', 'http://localhost/ppvs123//uploads/images/1_-_Copy_-_Copy_(2).PNG', '2021-07-19', ''),
-('NUWARAELIYA_2021-07-26_00:14:04', 'NUWARAELIYA', 'Bakmeedeniya_Road', 'Bridge', '', 'http://localhost/ppvs123//uploads/images/7e59dd0f-a361-4ea6-9b5c-998407e58808_(1)1.jpg', '2021-07-12', ''),
-('NUWARAELIYA_2021-07-26_00:14:22', 'NUWARAELIYA', 'Bakmeedeniya_Road', 'Bridge', '', 'http://localhost/ppvs123//uploads/images/7e59dd0f-a361-4ea6-9b5c-998407e588081.jpg', '2021-07-28', ''),
-('TEST_PROJECT_2021-07-22_14:47:47', 'TEST_PROJECT', 'CEP-59+100', 'Bridge', '', 'http://localhost/ppvs123//uploads/images/1_-_Copy_-_Copy_-_Copy_(2)3.PNG', '2021-07-26', ''),
-('WERAGANTOTA_2021-07-22_14:48:01', 'KEKIRAWA_THALAWA', '10+517_LHS_Kekirawa', 'Culvert', 'RHS', 'http://localhost/ppvs123//uploads/images/1_-_Copy_-_Copy_-_Copy8.PNG', '2021-07-26', 'new'),
-('WERAGANTOTA_2021-07-27_18:47:40', 'WERAGANTOTA', 'Weragantota_3+930_RHS', 'Bridge', 'LHS', 'http://localhost/ppvs123//uploads/images/30cbb88a-03ed-4f50-ab7c-f1894556dd9e2.jpg', '2021-07-27', 'new'),
-('WERAGANTOTA_2021-07-27_18:48:16', 'WERAGANTOTA', 'Weragantota_3+930_RHS', 'Bridge', 'None', 'http://localhost/ppvs123//uploads/images/30cbb88a-03ed-4f50-ab7c-f1894556dd9e3.jpg', '2021-07-20', 'first'),
-('WERAGANTOTA_2021-07-27_18:48:59', 'WERAGANTOTA', 'Weraganthota_0+855_LHS', 'Bridge', '', 'http://localhost/ppvs123//uploads/images/30cbb88a-03ed-4f50-ab7c-f1894556dd9e4.jpg', '2021-07-06', '');
+('KEKIRAWA_THALAWA_2021-08-29_15:14:46', 'KEKIRAWA_THALAWA', '10+517_LHS_Kekirawa', 'Other', 'RHS', 'http://localhost/ppvs123//uploads/images/Existing_Culvert_widening_(LHS)_8_2_2021.jpg', '2021-08-29', 'first'),
+('KEKIRAWA_THALAWA_2021-09-27_19:57:42', 'KEKIRAWA_THALAWA', '10+517_LHS_Kekirawa', 'Bridge', 'LHS', 'http://localhost/ppvs123//uploads/images/Base_completed_(RHS)_8_13_2021_.jpg', '2021-09-27', 'second');
 
 -- --------------------------------------------------------
 
@@ -322,11 +266,11 @@ INSERT INTO `userproject` (`ProjectCode`, `ProjectName`, `UserName`, `status`) V
 ('DUMMY55', 'DUMMY55', 'shehan.k', 'unchecked'),
 ('DUMMY66', 'DUMMY66', 'shehan.k', 'unchecked'),
 ('DUMMY77', 'DUMMY77', 'shehan.k', 'unchecked'),
-('KEKIRAWA_THALAWA', 'KEKIRAWA - THALAWA', 'shehan.k', 'unchecked'),
+('KEKIRAWA_THALAWA', 'KEKIRAWA - THALAWA', 'shehan.k', 'checked'),
 ('KEKIRAWA_THALAWA', 'KEKIRAWA - THALAWA', 'test1', 'checked'),
 ('KEKIRAWA_THALAWA', 'KEKIRAWA - THALAWA', 'test2', 'checked'),
 ('WERAGANTOTA', 'WERAGANTOTA RANDENIGALA (0+000 - 2+500 KM)', 'test2', 'checked'),
-('NIKAWERATIYA', 'NIKAWERATIYA', 'shehan.k', 'checked');
+('NIKAWERATIYA', 'NIKAWERATIYA', 'shehan.k', 'unchecked');
 
 --
 -- Indexes for dumped tables
