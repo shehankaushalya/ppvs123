@@ -211,7 +211,7 @@
 
 
 
-<div class="footer-copyright-area" style="background-color:#fff">
+<div class="footer-copyright-area" style="background-color:#fff" id="logo1">
 
                 <!-- <div class="col-lg-9 col-md-8 col-sm-7 col-xs-12"></div> -->
                 <!-- <div class="col-lg-2 col-md-2"></div>
@@ -223,7 +223,7 @@
                 <br>
                 </div> -->
                 <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9"></div>
-                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" id="logo1">
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" >
                     <center>
                         <img class="main-logo" src="<?php echo base_url(); ?>assets/new/img/logo/logo.png" alt="logo.png" style="height:75px" />
                         <h6>NEM Construction (Pvt) Ltd <br>
