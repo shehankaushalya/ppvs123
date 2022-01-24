@@ -90,9 +90,11 @@
                                                     <span class="step"><?php echo $this->session->userdata('name')[0]; ?></span><br></button>
                                                 <ul role="menu" class="dropdown-toggle dropdown-menu animated dropdown-menu-right zoomIn">
 
-                                                    <li><a class="zoomInDown mg-t" href="#" data-toggle="modal" data-target="#zoomInDown10"><span class="edu-icon edu-settings author-log-ic"></span>Change
-                                                            Password</a>
-                                                    </li>
+                                                <?php if ($this->session->userdata('ResetPassword') == "checked") { ?>
+                                                        <li><a class="zoomInDown mg-t" href="#" data-toggle="modal" data-target="#zoomInDown10">
+                                                            <span class="edu-icon edu-settings author-log-ic"></span>Change Password</a>
+                                                        </li>
+                                                     <?php } ?>
 
                                                     <li><a href="<?php
                                                                     echo base_url('index.php/User/LogoutUser');

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 26, 2021 at 07:09 AM
+-- Generation Time: Jan 24, 2022 at 08:18 AM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 8.0.3
 
@@ -201,6 +201,7 @@ CREATE TABLE `usermaster` (
 --
 
 INSERT INTO `usermaster` (`UserName`, `Name`, `Password`, `RefProject`, `Position`, `ContactNumber`, `Status`, `ProjectNew`, `ProjectView`, `ProjectEdit`, `ProjectDelete`, `UserNew`, `UserView`, `UserEdit`, `UserDelete`, `UserBlock`, `LocationNew`, `LocationEdit`, `LocationView`, `LocationDelete`, `PermissionSetup`, `ProjectAssign`, `ResetPassword`, `PermissionGrant`, `UserAssign`, `ProgressNew`, `ProgressView`, `ProgressEdit`, `ProgressDelete`, `ImageUpload`) VALUES
+('pubudu.h', 'Pubudu Harischandra', '8cb2237d0679ca88db6464eac60da96345513964', '', 'Project Manager', '1234567890', 'ACTIVE', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'YES', 'YES', 'checked', 'checked', 'checked', 'checked', 'checked'),
 ('shehan.k', 'Shehan Kaushalya', '8cb2237d0679ca88db6464eac60da96345513964', '', 'Headoffice User', '0714519639', 'Active    ', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'YES', 'YES', 'checked', 'checked', 'checked', 'checked', 'checked'),
 ('test1', 'test', '8cb2237d0679ca88db6464eac60da96345513964', '', 'Other', '1234567890', 'Active    ', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'YES', 'YES', 'checked', 'checked', 'checked', 'checked', ''),
 ('test2', 'test2', '8cb2237d0679ca88db6464eac60da96345513964', '', 'Head Office User', '1234567890', 'ACTIVE', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'YES', 'YES', 'checked', 'checked', 'checked', 'checked', '');
@@ -243,7 +244,7 @@ INSERT INTO `userproject` (`ProjectCode`, `ProjectName`, `UserName`, `status`) V
 ('WERAGANTOTA', 'WERAGANTOTA RANDENIGALA (0+000 - 2+500 KM)', 'test1', 'checked'),
 ('HO', 'HEAD OFFICE', 'shehan.k', 'unchecked'),
 ('HO', 'HEAD OFFICE', 'test1', 'unchecked'),
-('DUMMY', 'DUMMY', 'shehan.k', 'unchecked'),
+('DUMMY', 'DUMMY', 'shehan.k', 'checked'),
 ('DUMMY', 'DUMMY', 'test1', 'checked'),
 ('DUMMY1', 'DUMMY1', 'shehan.k', 'unchecked'),
 ('DUMMY2', 'DUMMY2', 'shehan.k', 'unchecked'),
@@ -265,7 +266,9 @@ INSERT INTO `userproject` (`ProjectCode`, `ProjectName`, `UserName`, `status`) V
 ('KEKIRAWA_THALAWA', 'KEKIRAWA - THALAWA', 'test1', 'checked'),
 ('KEKIRAWA_THALAWA', 'KEKIRAWA - THALAWA', 'test2', 'checked'),
 ('WERAGANTOTA', 'WERAGANTOTA RANDENIGALA (0+000 - 2+500 KM)', 'test2', 'checked'),
-('NIKAWERATIYA', 'NIKAWERATIYA', 'shehan.k', 'unchecked');
+('NIKAWERATIYA', 'NIKAWERATIYA', 'shehan.k', 'unchecked'),
+('DEHIATHTHAKANDIYA', 'DEHIATHTHAKANDIYA P14 & P15', 'pubudu.h', 'checked'),
+('DUMMY', 'DUMMY', 'pubudu.h', 'unchecked');
 
 --
 -- Indexes for dumped tables
