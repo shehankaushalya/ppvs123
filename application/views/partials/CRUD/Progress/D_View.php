@@ -77,17 +77,7 @@
                         </div>
                     </div>
 
-                    <div class="form-group-inner">
-                        <div class="row">
-                            <!-- <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                <label class="login2">Image</label>
-                            </div> -->
-                            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                                <input type="hidden" class="form-control" placeholder="Enter Image Link" name="Image"
-                                    id="D_V_Image" readonly />
-                            </div>
-                        </div>
-                    </div>
+                    
 
                     <div class="form-group-inner">
                         <div class="row">

@@ -108,6 +108,16 @@ $(function() {
                                                  <?php
                                                     } ?>
 
+                                                 <?php if ($this->session->userdata('ImageUpload') == "checked") { ?>
+                                                 <a class="zoomInDown mg-t">
+                                                     <button type="button" class="btn btn-link" href="#"
+                                                         data-toggle="modal" data-target="#zoomInDown5" disabled>
+                                                         <img
+                                                             src="<?php echo base_url(); ?>assets/new/img/BodyPNG/upload.png"><br>
+                                                        Image Upload</button></a>
+                                                 <?php
+                                                    } ?>
+
                                                  <button
                                                      onclick="exportExcel(document.getElementById('topic').innerText)"
                                                      type="button" class="btn btn-link">
@@ -352,30 +362,6 @@ $(function() {
                                                                              </div>
 
 
-                                                                             <div class="form-group-inner">
-                                                                                 <div class="row">
-                                                                                     <div
-                                                                                         class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                                                                         <label class="login2">Image</label>
-                                                                                     </div>
-                                                                                     <div
-                                                                                         class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                                                                                         <!-- <input type="text"
-                                                                                             class="form-control"
-                                                                                             placeholder="Enter Image Link"
-                                                                                             name="image"
-                                                                                             id="image1"
-                                                                                             required /> -->
-
-                                                                                             <input type="file"
-                                                                                             class="form-control"
-                                                                                             name="image"
-                                                                                             id="image1"
-                                                                                             required />
-                                                                                     </div>
-                                                                                 </div>
-                                                                             </div>
-
                                                                             
                                                                              <div class="form-group-inner">
                                                                                  <div class="row">
@@ -437,6 +423,110 @@ $(function() {
                                                                                                  type="submit">Add
                                                                                                  Progress Detail</button> -->
 
+                                                                                             <a data-dismiss="modal"
+                                                                                                 href="#"><button
+                                                                                                     class="btn btn-sm btn-primary login-submit-cs"
+                                                                                                     type="button">Cancel</button></a>
+
+                                                                                         </div>
+                                                                                     </div>
+                                                                                 </div>
+                                                                             </div>
+                                                                         </form>
+                                                                     </div>
+                                                                 </div>
+                                                             </div>
+                                                         </div>
+                                                     </div>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                         <!--Add Model END-->
+
+                                         <div id="zoomInDown5" class="modal modal-edu-general modal-zoomInDown fade"
+                                             role="dialog">
+                                             <div class="modal-dialog">
+                                                 <div class="modal-content">
+                                                     <div class="modal-header header-color-modal bg-color-1">
+                                                         <h4 class="modal-title">Upload Image</h4>
+                                                         <div class="modal-close-area modal-close-df">
+                                                             <a class="close" data-dismiss="modal" href="#"><i
+                                                                     class="fa fa-close"></i></a>
+                                                         </div>
+                                                     </div>
+                                                     <div class="modal-body">
+                                                         <div class="modal-login-form-inner">
+
+                                                             <div class="row">
+                                                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                                     <div class="basic-login-inner modal-basic-inner">
+
+
+                                                                         <form method="post"
+                                                                             action="../Progress/registerImage" enctype="multipart/form-data"
+                                                                             class="imageAdd">
+
+                                                                             
+
+                                                                             <div class="form-group-inner">
+                                                                                 <div class="row">
+                                                                                     <div
+                                                                                         class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                                                                         <label class="login2">PPD Code</label>
+                                                                                     </div>
+                                                                                     <div
+                                                                                         class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                                                                                         <input type="text"
+                                                                                             class="form-control"
+                                                                                             name="D_V_PpdCode"
+                                                                                             id="D_V_PpdCode"
+                                                                                             readonly />
+                                                                                     </div>
+                                                                                 </div>
+                                                                             </div>
+
+                                                                             <div class="form-group-inner">
+                                                                                 <div class="row">
+                                                                                     <div
+                                                                                         class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                                                                         <label class="login2">Image</label>
+                                                                                     </div>
+                                                                                     <div
+                                                                                         class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+
+                                                                                            
+
+                                                                                            <!-- <input type="text"
+                                                                                             class="form-control"
+                                                                                             placeholder="Enter Remark"
+                                                                                             name="Upload_Image"
+                                                                                             id="Upload_Image" 
+                                                                                             required /> -->
+                                                                                            
+                                                                                             <input type="file"
+                                                                                             class="form-control"
+                                                                                             name="image"
+                                                                                             id="image1"
+                                                                                             required />
+
+                                                                                     </div>
+                                                                                 </div>
+                                                                             </div>
+
+                                                                            
+
+                                                                             <div class="login-btn-inner">
+
+                                                                                 <div class="row">
+                                                                                     <div
+                                                                                         class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                                                                     </div>
+                                                                                     <div
+                                                                                         class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                                                                                         <div class="login-horizental">
+                                                                                            
+                                                                                            <input type="submit" value="Add Image" class="btn btn-sm btn-primary login-submit-cs" />
+                                                                          
                                                                                              <a data-dismiss="modal"
                                                                                                  href="#"><button
                                                                                                      class="btn btn-sm btn-primary login-submit-cs"
@@ -722,6 +812,7 @@ $(function() {
                                          </tr>
                                          <tr>
                                             
+                                             
                                              <th data-field="PpdCode">PPD Code</th>
                                              <th data-field="ProjectCode">Project Code</th>
                                              <th data-field="LocationCode">Location Code</th>
@@ -731,6 +822,7 @@ $(function() {
                                              <th data-field="Image">Image</th>
                                              <th data-field="ImgDate">Photo Capturing Date</th>
                                              <th data-field="Remark">Remark</th>
+                                             
 
 
                                          </tr>
@@ -743,6 +835,7 @@ $(function() {
                                            <?php if ($row->UserName == $this->session->userdata('username')) { ?>         
                                          <tr>
 
+                                             
                                              <td><?php echo $row->PpdCode ?></td>
                                              <td><?php echo $row->ProjectCode ?></td>
                                              <td><?php echo $row->LocationCode  ?></td>
@@ -759,9 +852,11 @@ $(function() {
                                                     data-geteid="<?php echo $row->Image ?>"
                                                     rel="noopener noreferrer">View</a>
                                              </td>
+                                             
                                              <td><?php echo $row->ImgDate  ?></td>
 
                                              <td><?php echo $row->Remark  ?></td>
+
 
 
                                          </tr>
@@ -823,7 +918,7 @@ for (var i = 2; i < table.rows.length; i++) {
         // document.getElementById("V_V_Status").value = this.cells[3].innerHTML;
         document.getElementById("V_V_PhotoItem").value = this.cells[3].innerHTML;
         document.getElementById("V_V_WorkSide").value = this.cells[4].innerHTML;
-        document.getElementById("V_V_Image").value = this.cells[5].innerHTML;
+        // document.getElementById("V_V_Image").value = this.cells[5].innerHTML;
         document.getElementById("V_V_ImgDate").value = this.cells[6].innerHTML;
         document.getElementById("V_V_Remark").value = this.cells[7].innerHTML;
 
@@ -833,7 +928,7 @@ for (var i = 2; i < table.rows.length; i++) {
         // document.getElementById("V_E_Status").value = this.cells[3].innerHTML;
         document.getElementById("V_E_PhotoItem").value = this.cells[3].innerHTML;
         document.getElementById("V_E_WorkSide").value = this.cells[4].innerHTML;
-        document.getElementById("V_E_Image").value = this.cells[5].innerHTML;
+        // document.getElementById("V_E_Image").value = this.cells[5].innerHTML;
         document.getElementById("V_E_ImgDate").value = this.cells[6].innerHTML;
         document.getElementById("V_E_Remark").value = this.cells[7].innerHTML;
 
@@ -843,7 +938,7 @@ for (var i = 2; i < table.rows.length; i++) {
         // document.getElementById("V_D_Status").value = this.cells[3].innerHTML;
         document.getElementById("V_D_PhotoItem").value = this.cells[3].innerHTML;
         document.getElementById("V_D_WorkSide").value = this.cells[4].innerHTML;
-        document.getElementById("V_D_Image").value = this.cells[5].innerHTML;
+        // document.getElementById("V_D_Image").value = this.cells[5].innerHTML;
         document.getElementById("V_D_ImgDate").value = this.cells[6].innerHTML;
         document.getElementById("V_D_Remark").value = this.cells[7].innerHTML;
 
@@ -853,7 +948,7 @@ for (var i = 2; i < table.rows.length; i++) {
         // document.getElementById("E_V_Status").value = this.cells[3].innerHTML;
         document.getElementById("E_V_PhotoItem").value = this.cells[3].innerHTML;
         document.getElementById("E_V_WorkSide").value = this.cells[4].innerHTML;
-        document.getElementById("E_V_Image").value = this.cells[5].innerHTML;
+        // document.getElementById("E_V_Image").value = this.cells[5].innerHTML;
         document.getElementById("E_V_ImgDate").value = this.cells[6].innerHTML;
         document.getElementById("E_V_Remark").value = this.cells[7].innerHTML;
 
@@ -863,7 +958,7 @@ for (var i = 2; i < table.rows.length; i++) {
         // document.getElementById("E_E_Status").value = this.cells[3].innerHTML;
         document.getElementById("E_E_PhotoItem").value = this.cells[3].innerHTML;
         document.getElementById("E_E_WorkSide").value = this.cells[4].innerHTML;
-        document.getElementById("E_E_Image").value = this.cells[5].innerHTML;
+        // document.getElementById("E_E_Image").value = this.cells[5].innerHTML;
         document.getElementById("E_E_ImgDate").value = this.cells[6].innerHTML;
         document.getElementById("E_E_Remark").value = this.cells[7].innerHTML;
 
@@ -873,7 +968,7 @@ for (var i = 2; i < table.rows.length; i++) {
         // document.getElementById("E_D_Status").value = this.cells[3].innerHTML;
         document.getElementById("E_D_PhotoItem").value = this.cells[3].innerHTML;
         document.getElementById("E_D_WorkSide").value = this.cells[4].innerHTML;
-        document.getElementById("E_D_Image").value = this.cells[5].innerHTML;
+        // document.getElementById("E_D_Image").value = this.cells[5].innerHTML;
         document.getElementById("E_D_ImgDate").value = this.cells[6].innerHTML;
         document.getElementById("E_D_Remark").value = this.cells[7].innerHTML;
 
@@ -883,7 +978,7 @@ for (var i = 2; i < table.rows.length; i++) {
         // document.getElementById("D_V_Status").value = this.cells[3].innerHTML;
         document.getElementById("D_V_PhotoItem").value = this.cells[3].innerHTML;
         document.getElementById("D_V_WorkSide").value = this.cells[4].innerHTML;
-        document.getElementById("D_V_Image").value = this.cells[5].innerHTML;
+        // document.getElementById("D_V_Image").value = this.cells[5].innerHTML;
         document.getElementById("D_V_ImgDate").value = this.cells[6].innerHTML;
         document.getElementById("D_V_Remark").value = this.cells[7].innerHTML;
 
@@ -893,7 +988,7 @@ for (var i = 2; i < table.rows.length; i++) {
         // document.getElementById("D_E_Status").value = this.cells[3].innerHTML;
         document.getElementById("D_E_PhotoItem").value = this.cells[3].innerHTML;
         document.getElementById("D_E_WorkSide").value = this.cells[4].innerHTML;
-        document.getElementById("D_E_Image").value = this.cells[5].innerHTML;
+        // document.getElementById("D_E_Image").value = this.cells[5].innerHTML;
         document.getElementById("D_E_ImgDate").value = this.cells[6].innerHTML;
         document.getElementById("D_E_Remark").value = this.cells[7].innerHTML;
 
@@ -903,11 +998,12 @@ for (var i = 2; i < table.rows.length; i++) {
         // document.getElementById("D_D_Status").value = this.cells[3].innerHTML;
         document.getElementById("D_D_PhotoItem").value = this.cells[3].innerHTML;
         document.getElementById("D_D_WorkSide").value = this.cells[4].innerHTML;
-        document.getElementById("D_D_Image").value = this.cells[5].innerHTML;
+        // document.getElementById("D_D_Image").value = this.cells[5].innerHTML;
         document.getElementById("D_D_ImgDate").value = this.cells[6].innerHTML;
         document.getElementById("D_D_Remark").value = this.cells[7].innerHTML;
 
 
+        document.getElementById("Upload_Image").value = this.cells[5].innerHTML;
 
 
     };
@@ -939,13 +1035,13 @@ $('.js-example-basic-multiple').select2();
                 
                 
             </div>
-            <div align="center">
+            <!-- <div align="center">
                 <input type="button" class="btnRotate" value="UP" onClick="rotateImage(90);" />
                 <input type="button" class="btnRotate" value="DOWN" onClick="rotateImage(-90);" />
                 <input type="button" class="btnRotate" value="RIGHT" onClick="rotateImage(180);" />
                 <input type="button" class="btnRotate" value="LEFT" onClick="rotateImage(360);" />
                 <input type="button" class="btnRotate" value="RESET" onClick="rotateImage(90);" />
-            </div>
+            </div> -->
 
         </div>
     </div>
@@ -962,7 +1058,7 @@ $('.js-example-basic-multiple').select2();
     });
     </script>
 
-    <script>
+    <!-- <script>
         function rotateImage(degree) {
             $('#EditRecord .img-thumbnail').animate({  transform: degree }, {
                 step: function(now,fx) {
@@ -974,7 +1070,27 @@ $('.js-example-basic-multiple').select2();
     }
     });
     }
-    </script>
+    </script> -->
 
     <!--image rotation function is included-->
+
+<script>
+        $(function(){
+            var dtToday = new Date();
+
+            var month = dtToday.getMonth() + 1;
+            var day = dtToday.getDate();
+            var year = dtToday.getFullYear();
+
+            if(month < 10)
+                month = '0' + month.toString();
+            if(day < 10)
+                day = '0' + day.toString();
+
+            var maxDate = year + '-' + month + '-' + day;    
+            $('#imgdate1').attr('max', maxDate);
+        });
+</script>
+
+
     

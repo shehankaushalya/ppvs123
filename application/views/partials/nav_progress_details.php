@@ -54,17 +54,23 @@
   border-radius: 0;
 }
 
-#image-gallery-image{
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
+
 
 
 @media(min-width:991px) {
     #logo {
         visibility: hidden;
+    }
+    #image-gallery-image{
+        width: 45%;
+        height: 45%;
+        display: block;
+        left: 25%;
+        right: 25%;
+        /* bottom: 25%; */
+    }
+    .modal-header{
+      margin-top: 10px;
     }
     }
 
@@ -73,11 +79,29 @@
     #logo {
         visibility: visible;
     }
+    #image-gallery-image{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .modal-header{
+      margin-top: 50px;
+    }
     }
 
     @media(max-width:767px) {
     #logo {
         visibility: visible;
+    }
+    #image-gallery-image{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .modal-header{
+      margin-top: 50px;
     }
     }
 
@@ -85,17 +109,44 @@
     #logo {
         visibility: visible;
     }
+    #image-gallery-image{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .modal-header{
+      margin-top: 50px;
+    }
     }
 
     @media(max-width:360px) {
     #logo {
         visibility: visible;
     }
+    #image-gallery-image{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .modal-header{
+      margin-top: 50px;
+    }
     }
 
     @media(max-width:320px) {
     #logo {
         visibility: visible;
+    }
+    #image-gallery-image{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .modal-header{
+      margin-top: 50px;
     }
     }
 
@@ -218,7 +269,7 @@
                                     data-image="<?php echo $row->Image ?>"
                                     data-target="#image-gallery">
 
-                                    <img class="img-thumbnail"
+                                    <img class="img-thumbnail" style="width:400px; height:400px;"
                                     src="<?php echo $row->Image ?>"
                                     alt="Another alt text">
 
@@ -260,7 +311,7 @@
                                     data-image="<?php echo $row->Image ?>"
                                     data-target="#image-gallery">
 
-                                    <img class="img-thumbnail"
+                                    <img class="img-thumbnail" style="width:400px; height:400px;"
                                     src="<?php echo $row->Image ?>"
                                     alt="Another alt text">
 
@@ -306,7 +357,7 @@
                                     data-image="<?php echo $row->Image ?>"
                                     data-target="#image-gallery">
 
-                                    <img class="img-thumbnail"
+                                    <img class="img-thumbnail" style="width:400px; height:400px;"
                                     src="<?php echo $row->Image ?>"
                                     alt="Another alt text">
 
@@ -339,11 +390,17 @@
         <div class="modal fade" id="image-gallery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog1 modal-lg">
                 <div class="modal-content">
-                <br><br><br><br><br>
+                <!-- <br><br><br><br><br> -->
+                    <!-- <div class="modal-header" style="margin-top: 10px"> -->
                     <div class="modal-header">
                     <center>
                         <h4 class="modal-title" id="image-gallery-title" style="font-size:28px;color:#337ab7"></h4>
                         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span>
+                        </button>
+                        <button type="button" class="btn btn-secondary float-left btn-lg" id="show-previous-image" style="font-size: 26px;"><i class="fa fa-arrow-left"></i>
+                        </button>
+
+                        <button type="button" id="show-next-image" class="btn btn-secondary float-right btn-lg" style="font-size: 26px;"><i class="fa fa-arrow-right"></i>
                         </button>
                     </center>
                     </div>
@@ -351,13 +408,6 @@
                         <img id="image-gallery-image" class="img-responsive col-md-12" src="">
                     </div>
                     <div class="modal-footer">
-                        <center>
-                        <button type="button" class="btn btn-secondary float-left btn-lg" id="show-previous-image" style="font-size: 28px;"><i class="fa fa-arrow-left"></i>
-                        </button>
-
-                        <button type="button" id="show-next-image" class="btn btn-secondary float-right btn-lg" style="font-size: 28px;"><i class="fa fa-arrow-right"></i>
-                        </button>
-                        </center>
                     </div>
                 </div>
             </div>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 05, 2021 at 06:44 AM
+-- Generation Time: Nov 26, 2021 at 07:09 AM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 8.0.3
 
@@ -68,6 +68,7 @@ INSERT INTO `locationsubmaster` (`Location`, `LocationCode`, `Description`, `Pro
 ('dummy_location', 'dummy_location', 'dummy', 'NUWARAELIYA', 'NUWARAELIYA ROAD(98+460 - 104+460) KM', 'Work_In_Progress'),
 ('dummy_location1', 'dummy_location1', 'dummy', 'DUMMY', 'DUMMY', 'Completed'),
 ('dummy_location2', 'dummy_location2', 'dummy', 'TEST_PROJECT', 'TEST PROJECT', 'Initiated'),
+('dehi500+300', 'dummy_location21', 'Road', 'DEHIATHTHAKANDIYA', 'DEHIATHTHAKANDIYA P14 & P15', 'Not_Yet_Started'),
 ('Jaffna 3+300', 'Jaffna_3+300', '', 'IROAD_JAFFNA', 'JAFFNA - I ROAD -04', ''),
 ('Kirimatiya 3+446 LHS', 'Kirimatiya_3+446_LHS', '', 'KIRIMETIYA', 'KIRIMETIYA ROAD (0+000 - 4+000) KM', ''),
 ('Kirimatiya 3+560 LHS', 'Kirimatiya_3+560_LHS', '', 'KIRIMETIYA', 'KIRIMETIYA ROAD (0+000 - 4+000) KM', ''),
@@ -80,6 +81,7 @@ INSERT INTO `locationsubmaster` (`Location`, `LocationCode`, `Description`, `Pro
 ('Nuwaraeliya 98+100', 'Nuwaraeliya_98+100', '', 'NUWARAELIYA', 'NUWARAELIYA ROAD(98+460 - 104+460) KM', ''),
 ('Nuwaraeliya 99+720', 'Nuwaraeliya_99+720', '', 'NUWARAELIYA', 'NUWARAELIYA ROAD(98+460 - 104+460) KM', ''),
 ('Nuwaraeliya Site', 'Nuwaraeliya_Site', '', 'NUWARAELIYA', 'NUWARAELIYA ROAD(98+460 - 104+460) KM', ''),
+('123', 'ssfsf', 'Road', 'DEHIATHTHAKANDIYA', 'DEHIATHTHAKANDIYA P14 & P15', 'Not_Yet_Started'),
 ('Test Location 01', 'Test_Location_01', 'For Testing Purposes Only', 'TEST_PROJECT', 'TEST PROJECT', ''),
 ('Test Location 02', 'Test_Location_02', 'For Testing Purposes Only', 'TEST_PROJECT', 'TEST PROJECT', ''),
 ('Weraganthota 0+855 LHS', 'Weraganthota_0+855_LHS', '', 'WERAGANTOTA', 'WERAGANTOTA RANDENIGALA (0+000 - 2+500 KM)', 'Hold'),
@@ -106,14 +108,6 @@ CREATE TABLE `progressmaster` (
   `ImgDate` varchar(100) NOT NULL,
   `Remark` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `progressmaster`
---
-
-INSERT INTO `progressmaster` (`PpdCode`, `ProjectCode`, `LocationCode`, `PhotoItem`, `WorkSide`, `Image`, `ImgDate`, `Remark`) VALUES
-('KEKIRAWA_THALAWA_2021-08-29_15:14:46', 'KEKIRAWA_THALAWA', '10+517_LHS_Kekirawa', 'Other', 'RHS', 'http://localhost/ppvs123//uploads/images/Existing_Culvert_widening_(LHS)_8_2_2021.jpg', '2021-08-29', 'first'),
-('KEKIRAWA_THALAWA_2021-09-27_19:57:42', 'KEKIRAWA_THALAWA', '10+517_LHS_Kekirawa', 'Bridge', 'LHS', 'http://localhost/ppvs123//uploads/images/Base_completed_(RHS)_8_13_2021_.jpg', '2021-09-27', 'second');
 
 -- --------------------------------------------------------
 
@@ -198,17 +192,18 @@ CREATE TABLE `usermaster` (
   `ProgressNew` varchar(10) NOT NULL,
   `ProgressView` varchar(10) NOT NULL,
   `ProgressEdit` varchar(10) NOT NULL,
-  `ProgressDelete` varchar(10) NOT NULL
+  `ProgressDelete` varchar(10) NOT NULL,
+  `ImageUpload` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `usermaster`
 --
 
-INSERT INTO `usermaster` (`UserName`, `Name`, `Password`, `RefProject`, `Position`, `ContactNumber`, `Status`, `ProjectNew`, `ProjectView`, `ProjectEdit`, `ProjectDelete`, `UserNew`, `UserView`, `UserEdit`, `UserDelete`, `UserBlock`, `LocationNew`, `LocationEdit`, `LocationView`, `LocationDelete`, `PermissionSetup`, `ProjectAssign`, `ResetPassword`, `PermissionGrant`, `UserAssign`, `ProgressNew`, `ProgressView`, `ProgressEdit`, `ProgressDelete`) VALUES
-('shehan.k', 'Shehan Kaushalya', '8cb2237d0679ca88db6464eac60da96345513964', '', 'Headoffice User', '0714519639', 'Active    ', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'YES', 'YES', 'checked', 'checked', 'checked', 'checked'),
-('test1', 'test', '8cb2237d0679ca88db6464eac60da96345513964', '', 'Other', '1234567890', 'Active    ', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'YES', 'YES', 'checked', 'checked', 'checked', 'checked'),
-('test2', 'test2', '8cb2237d0679ca88db6464eac60da96345513964', '', 'Head Office User', '1234567890', 'ACTIVE', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'YES', 'YES', 'checked', 'checked', 'checked', 'checked');
+INSERT INTO `usermaster` (`UserName`, `Name`, `Password`, `RefProject`, `Position`, `ContactNumber`, `Status`, `ProjectNew`, `ProjectView`, `ProjectEdit`, `ProjectDelete`, `UserNew`, `UserView`, `UserEdit`, `UserDelete`, `UserBlock`, `LocationNew`, `LocationEdit`, `LocationView`, `LocationDelete`, `PermissionSetup`, `ProjectAssign`, `ResetPassword`, `PermissionGrant`, `UserAssign`, `ProgressNew`, `ProgressView`, `ProgressEdit`, `ProgressDelete`, `ImageUpload`) VALUES
+('shehan.k', 'Shehan Kaushalya', '8cb2237d0679ca88db6464eac60da96345513964', '', 'Headoffice User', '0714519639', 'Active    ', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'YES', 'YES', 'checked', 'checked', 'checked', 'checked', 'checked'),
+('test1', 'test', '8cb2237d0679ca88db6464eac60da96345513964', '', 'Other', '1234567890', 'Active    ', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'YES', 'YES', 'checked', 'checked', 'checked', 'checked', ''),
+('test2', 'test2', '8cb2237d0679ca88db6464eac60da96345513964', '', 'Head Office User', '1234567890', 'ACTIVE', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'YES', 'YES', 'checked', 'checked', 'checked', 'checked', '');
 
 -- --------------------------------------------------------
 
@@ -236,7 +231,7 @@ INSERT INTO `userproject` (`ProjectCode`, `ProjectName`, `UserName`, `status`) V
 ('WERAGANTOTA', 'WERAGANTOTA RANDENIGALA (0+000 - 2+500 KM)', 'shehan.k', 'unchecked'),
 ('KULIYAPITIYA', 'KULIYAPITIYA - PADIWELA', 'shehan.k', 'unchecked'),
 ('MAHIYANGANAYA', 'MAHIYANGANAYA P19 & P23', 'shehan.k', 'unchecked'),
-('DEHIATHTHAKANDIYA', 'DEHIATHTHAKANDIYA P14 & P15', 'shehan.k', 'unchecked'),
+('DEHIATHTHAKANDIYA', 'DEHIATHTHAKANDIYA P14 & P15', 'shehan.k', 'checked'),
 ('CEP-2/PK-C', 'CENTRALEXPRSSWAY(57+000-62+330KM&63+950-69+500KM)', 'test1', 'unchecked'),
 ('DEHIATHTHAKANDIYA', 'DEHIATHTHAKANDIYA P14 & P15', 'test1', 'unchecked'),
 ('IROAD_JAFFNA', 'JAFFNA - I ROAD -04', 'test1', 'unchecked'),
@@ -266,7 +261,7 @@ INSERT INTO `userproject` (`ProjectCode`, `ProjectName`, `UserName`, `status`) V
 ('DUMMY55', 'DUMMY55', 'shehan.k', 'unchecked'),
 ('DUMMY66', 'DUMMY66', 'shehan.k', 'unchecked'),
 ('DUMMY77', 'DUMMY77', 'shehan.k', 'unchecked'),
-('KEKIRAWA_THALAWA', 'KEKIRAWA - THALAWA', 'shehan.k', 'checked'),
+('KEKIRAWA_THALAWA', 'KEKIRAWA - THALAWA', 'shehan.k', 'unchecked'),
 ('KEKIRAWA_THALAWA', 'KEKIRAWA - THALAWA', 'test1', 'checked'),
 ('KEKIRAWA_THALAWA', 'KEKIRAWA - THALAWA', 'test2', 'checked'),
 ('WERAGANTOTA', 'WERAGANTOTA RANDENIGALA (0+000 - 2+500 KM)', 'test2', 'checked'),

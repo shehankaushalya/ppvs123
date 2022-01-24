@@ -212,7 +212,7 @@ button.btn.btn-link {
                         <div class="form-group-inner">
                             <div class="row" style="height: 25px;">
                                 <div class="col-lg-2 col-md-2 col-sm-4 col-xs-12">
-                                    <label class="login2">Postion</label>
+                                    <label class="login2">Position</label>
                                 </div>
                                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                     <select class="js-example-basic-multiple" id="position" name="Position"
@@ -271,6 +271,8 @@ button.btn.btn-link {
                                             
 
                                             <th colspan=4 data-field="progress">Project Progress</th>
+
+                                            <th rowspan=2 data-field="upload">Upload Image</th>
 
 
                                         </tr>
@@ -439,7 +441,13 @@ button.btn.btn-link {
                                                         value="<?php echo $row->UserName  ?>"
                                                         <?php echo  $row->ProgressDelete ?>><i></i> </td>
 
+                                                
 
+
+                                                <td><input type="checkbox" name="ImageUpload[]" id="ImageUpload"
+                                                        onclick="function1(this,'ImageUpload','<?php echo $row->UserName  ?>')"
+                                                        value="<?php echo $row->UserName  ?>"
+                                                        <?php echo  $row->ImageUpload ?>><i></i> </td>
 
 
 

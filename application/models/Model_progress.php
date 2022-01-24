@@ -3,7 +3,7 @@
 class Model_progress extends CI_Model
 {
 
-    function insertProgressData($file_path)
+    function insertProgressData()
     {
 
         date_default_timezone_set('Asia/Colombo');
@@ -18,7 +18,7 @@ class Model_progress extends CI_Model
             'PhotoItem' => $this->input->post('photoitem', true),
             'WorkSide' => $this->input->post('workside', true),
             // 'Image' => $this->input->post('image', true),
-            'Image' => $file_path,
+            
             'ImgDate' => $this->input->post('imgdate', true),
             'PpdCode' => $this->input->post('projectcode') . "_" . date('Y-m-d_H:i:s'),
             'Remark' => $this->input->post('remark', true),
@@ -27,6 +27,8 @@ class Model_progress extends CI_Model
 
         return $this->db->insert('progressmaster', $data);
     }
+
+    
 
     function progress_fetch_data()
     {
@@ -114,6 +116,15 @@ class Model_progress extends CI_Model
         $this->db->query("update progressmaster set ProjectCode = '$ProjectCode', LocationCode='$LocationCode', 
          PhotoItem ='$PhotoItem', WorkSide ='$WorkSide', ImgDate='$ImgDate', Remark='$Remark' where PpdCode='$PpdCode' ");
     }
+
+    public function update_image_records($PpdCode, $file_path)
+    {
+
+        $this->db->query("update progressmaster set Image='$file_path' where PpdCode='$PpdCode' ");
+    }
+
+
+
     public function deletedata($PpdCode)
     {
 

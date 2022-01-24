@@ -219,17 +219,7 @@
                         </div>
 
 
-                        <div class="form-group-inner">
-                            <div class="row">
-                                <!-- <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                    <label class="login2">Image</label>
-                                </div> -->
-                                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                                    <input type="hidden" class="form-control" placeholder="Enter Image Link" name="Image"
-                                        id="E_E_Image" readonly/>
-                                </div>
-                            </div>
-                        </div>
+                        
 
 
                         <div class="form-group-inner">
@@ -238,7 +228,8 @@
                                     <label class="login2">Photo Capturing Date</label>
                                 </div>
                                 <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                                    <input type="date" class="form-control" id="E_E_ImgDate" name="ImgDate" />
+                                
+                                    <input type="text" class="form-control" id="E_E_ImgDate" name="ImgDate" readonly/>
                                     <!-- <input type="text" class="form-control" placeholder="Enter Photo Capturing Date" name="ImgDate"
                                         id="E_E_ImgDate"  /> -->
                                 </div>
@@ -257,8 +248,23 @@
                             </div>
                         </div>
 
+<!-- <script>
+        $(function(){
+            var dtToday = new Date();
 
+            var month = dtToday.getMonth() + 1;
+            var day = dtToday.getDate();
+            var year = dtToday.getFullYear();
 
+            if(month < 10)
+                month = '0' + month.toString();
+            if(day < 10)
+                day = '0' + day.toString();
+
+            var maxDate = year + '-' + month + '-' + day;    
+            $('#E_E_ImgDate').attr('max', maxDate);
+        });
+</script> -->
                         
                         
 

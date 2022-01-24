@@ -926,7 +926,34 @@ $(function() {
     // end supplier validation
 
 
+    // image validation
+    $(".imageAdd").validate({
 
+    rules: {
+    
+    image: {
+        required: true,
+    },
+    
+    },
+
+    messages: {
+    
+    image: {
+        required: '<span style="color:red" >Please upload an Image</span>',
+        remote: '<span style="color:red">Please upload an Image</span>'
+    },
+    
+
+
+    },
+
+    errorPlacement: function(error, element) {
+    error.insertAfter(element.parent());
+    }
+    });
+
+    // end image validation
 
 
 
@@ -967,9 +994,9 @@ $(function() {
             workside: {
                 required: true,
             },
-            image: {
-                required: true,
-            },
+            // image: {
+            //     required: true,
+            // },
             imgdate: {
                 required: true,
             },
@@ -998,10 +1025,10 @@ $(function() {
                 required: '<span style="color:red" >Please select Working Side</span>',
                 remote: '<span style="color:red">Please select a valid Working Side</span>'
             },
-            image: {
-                required: '<span style="color:red" >Please upload an Image</span>',
-                remote: '<span style="color:red">Please upload an Image</span>'
-            },
+            // image: {
+            //     required: '<span style="color:red" >Please upload an Image</span>',
+            //     remote: '<span style="color:red">Please upload an Image</span>'
+            // },
             imgdate: {
                 required: '<span style="color:red" >Please select Image Date</span>',
                 remote: '<span style="color:red">Please select a valid Image Date</span>'
@@ -1047,9 +1074,9 @@ $(function() {
             WorkSide: {
                 required: true,
             },
-            Image: {
-                required: true,
-            },
+            // Image: {
+            //     required: true,
+            // },
             ImgDate: {
                 required: true,
 
@@ -1087,9 +1114,9 @@ $(function() {
             WorkSide: {
                 required: '<span style="color:red">Please select Working Side</span>'
             },
-            Image: {
-                required: '<span style="color:red">Please upload an Image</span>'
-            },
+            // Image: {
+            //     required: '<span style="color:red">Please upload an Image</span>'
+            // },
             ImgDate: {
                 required: '<span style="color:red">Please select Image Date</span>'
             },
@@ -1132,9 +1159,9 @@ $(function() {
             WorkSide: {
                 required: true,
             },
-            Image: {
-                required: true,
-            },
+            // Image: {
+            //     required: true,
+            // },
             ImgDate: {
                 required: true,
 
@@ -1171,9 +1198,9 @@ $(function() {
             WorkSide: {
                 required: '<span style="color:red">Please select Working Side</span>'
             },
-            Image: {
-                required: '<span style="color:red">Please upload an Image</span>'
-            },
+            // Image: {
+            //     required: '<span style="color:red">Please upload an Image</span>'
+            // },
             ImgDate: {
                 required: '<span style="color:red">Please select Image Date</span>'
             },
@@ -1216,9 +1243,9 @@ $(function() {
             WorkSide: {
                 required: true,
             },
-            Image: {
-                required: true,
-            },
+            // Image: {
+            //     required: true,
+            // },
             ImgDate: {
                 required: true,
 
@@ -1251,9 +1278,9 @@ $(function() {
             WorkSide: {
                 required: '<span style="color:red">Please select Working Side</span>'
             },
-            Image: {
-                required: '<span style="color:red">Please upload an Image</span>'
-            },
+            // Image: {
+            //     required: '<span style="color:red">Please upload an Image</span>'
+            // },
             ImgDate: {
                 required: '<span style="color:red">Please select Image Date</span>'
             },

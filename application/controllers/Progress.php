@@ -76,7 +76,7 @@ class Progress extends CI_Controller
         // $this->form_validation->set_rules('status', 'status', 'required');
         $this->form_validation->set_rules('photoitem', 'photoitem', 'required');
         $this->form_validation->set_rules('workside', 'workside', 'required');
-        $this->form_validation->set_rules('image', 'image');
+        // $this->form_validation->set_rules('image', 'image');
         $this->form_validation->set_rules('imgdate', 'imgdate', 'required');
         // $this->form_validation->set_rules('imgdate', 'imgdate', 'required|is_unique[progressmaster.ImgDate]');
         $this->form_validation->set_rules('remark', 'remark', 'required');
@@ -86,26 +86,8 @@ class Progress extends CI_Controller
             redirect('Progress/progressView');
         } else {
 
-            $config['allowed_types'] = 'jpg|jpeg|png'; 
-            $config['upload_path'] = './uploads/images/'; 
-            $this->load->library('upload',$config);
-
-
-            if($this->upload->do_upload('image')){ 
-            
-                // $data = array('upload_data' => $this->upload->data());
-                
-                $upload_data = $this->upload->data();
-                //$file_path = $upload_data['file_path'];
-
-                $file_path = base_url().'/uploads/images/'.$upload_data['file_name'];
-                
-                // $this->load->view('progress', $data);
-                // print_r($this->upload->data());
-                // print_r($file_path);
-
                 $this->load->model('Model_progress');
-                $response = $this->Model_progress->insertProgressData($file_path);
+                $response = $this->Model_progress->insertProgressData();
                 if ($response) {
                 
                     $this->session->set_flashdata('msg', 'Inserted Successfully.');
@@ -115,44 +97,37 @@ class Progress extends CI_Controller
                     $this->session->set_flashdata('errmsg', 'Something Went Wrong');
                     redirect('Progress/progressView');
                 }
-                
-            }else{ 
-    
-                // redirect('Home/PpvsHome');
-                // print_r($this->upload->display_errors());
-                $this->session->set_flashdata('errmsg', 'Something Went Wrong');
-                redirect('Progress/progressView');
-            } 
-
-
-
-
-            // $this->upload->do_upload('image');
-            // $upload_data = $this->upload->data();
-            // $file_path = $upload_data['full_path']; 
-
-            // $this->upload->initialize($this->set_upload_options());
-            // $this->upload->do_upload('image');
-            // $upload_data = $this->upload->data();
-            // $file_path = $upload_data['full_path'];
-
-
-
-
-
-            // $this->load->model('Model_progress');
-            // $response = $this->Model_progress->insertProgressData($file_path);
-            // if ($response) {
-                
-            //     $this->session->set_flashdata('msg', 'Inserted Successfully.');
-
-            //     redirect('Progress/progresses');
-            // } else {
-            //     $this->session->set_flashdata('errmsg', 'Something Went Wrong');
-            //     redirect('Progress/progressView');
-            // }
         }
     }
+
+    public function registerImage()
+    {
+        $PpdCode = $this->input->post('D_V_PpdCode');
+        $config['allowed_types'] = 'jpg|jpeg|png'; 
+        $config['upload_path'] = './uploads/images/'; 
+        $this->load->library('upload',$config); 
+
+        if($this->upload->do_upload('image')){ 
+            
+            // $data = array('upload_data' => $this->upload->data());
+            
+            $upload_data = $this->upload->data();
+            $file_path = base_url().'/uploads/images/'.$upload_data['file_name'];
+            $this->load->model('Model_progress');
+
+            $this->Model_progress->update_image_records($PpdCode, $file_path);
+            $this->session->set_flashdata('msg', 'Inserted Successfully.');
+            redirect('Progress/progresses');
+            
+         }else{ 
+            $this->session->set_flashdata('errmsg', 'Something Went Wrong');
+            redirect('Progress/progressView');
+         } 
+        
+        
+    }
+
+    
 
     public function progressView()
     {
