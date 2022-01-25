@@ -104,7 +104,10 @@ class Progress extends CI_Controller
     {
         $PpdCode = $this->input->post('D_V_PpdCode');
         $config['allowed_types'] = 'jpg|jpeg|png'; 
-        $config['upload_path'] = './uploads/images/'; 
+        $config['upload_path'] = './uploads/images/';
+        $config['max_size'] = 1024;
+        $config['max_width'] = 1000;
+        $config['max_height'] = 1000; 
         $this->load->library('upload',$config); 
 
         if($this->upload->do_upload('image')){ 
