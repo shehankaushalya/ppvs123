@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 24, 2022 at 08:18 AM
+-- Generation Time: Jan 25, 2022 at 06:41 AM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 8.0.3
 
@@ -66,7 +66,6 @@ INSERT INTO `locationsubmaster` (`Location`, `LocationCode`, `Description`, `Pro
 ('CEP-68+150', 'CEP-68+150', '', 'CEP-2/PK-C', 'CENTRALEXPRSSWAY(57+000-62+330KM&63+950-69+500KM)', ''),
 ('CEP 59+900', 'CEP_59+900', '', 'CEP-2/PK-C', 'CENTRALEXPRSSWAY(57+000-62+330KM&63+950-69+500KM)', ''),
 ('dummy_location', 'dummy_location', 'dummy', 'NUWARAELIYA', 'NUWARAELIYA ROAD(98+460 - 104+460) KM', 'Work_In_Progress'),
-('dummy_location1', 'dummy_location1', 'dummy', 'DUMMY', 'DUMMY', 'Completed'),
 ('dummy_location2', 'dummy_location2', 'dummy', 'TEST_PROJECT', 'TEST PROJECT', 'Initiated'),
 ('dehi500+300', 'dummy_location21', 'Road', 'DEHIATHTHAKANDIYA', 'DEHIATHTHAKANDIYA P14 & P15', 'Not_Yet_Started'),
 ('Jaffna 3+300', 'Jaffna_3+300', '', 'IROAD_JAFFNA', 'JAFFNA - I ROAD -04', ''),
@@ -129,23 +128,6 @@ CREATE TABLE `projectmaster` (
 INSERT INTO `projectmaster` (`ProjectName`, `ProjectCode`, `MainLocation`, `Description`) VALUES
 ('CENTRALEXPRSSWAY(57+000-62+330KM&63+950-69+500KM)', 'CEP-2/PK-C', '', 'Road'),
 ('DEHIATHTHAKANDIYA P14 & P15', 'DEHIATHTHAKANDIYA', '', 'Road'),
-('DUMMY', 'DUMMY', '', 'dummy'),
-('DUMMY1', 'DUMMY1', '', 'dummy1'),
-('DUMMY11', 'DUMMY11', '', 'dummy11'),
-('DUMMY2', 'DUMMY2', '', 'dummy2'),
-('DUMMY22', 'DUMMY22', '', 'dummy22'),
-('DUMMY3', 'DUMMY3', '', 'dummy3'),
-('DUMMY33', 'DUMMY33', '', 'dummy33'),
-('DUMMY4', 'DUMMY4', '', 'dummy4'),
-('DUMMY44', 'DUMMY44', '', 'dummy44'),
-('DUMMY5', 'DUMMY5', '', 'dummy5'),
-('DUMMY55', 'DUMMY55', '', 'dummy55'),
-('DUMMY6', 'DUMMY6', '', 'dummy6'),
-('DUMMY66', 'DUMMY66', '', 'dummy66'),
-('DUMMY7', 'DUMMY7', '', 'dummy7'),
-('DUMMY77', 'DUMMY77', '', 'dummy77'),
-('DUMMY8', 'DUMMY8', '', 'dummy8'),
-('DUMMY9', 'DUMMY9', '', 'dummy9'),
 ('HEAD OFFICE', 'HO', '', ''),
 ('JAFFNA - I ROAD -04', 'IROAD_JAFFNA', '', 'Road'),
 ('KEKIRAWA - THALAWA', 'KEKIRAWA_THALAWA', '', 'Road'),
@@ -244,31 +226,12 @@ INSERT INTO `userproject` (`ProjectCode`, `ProjectName`, `UserName`, `status`) V
 ('WERAGANTOTA', 'WERAGANTOTA RANDENIGALA (0+000 - 2+500 KM)', 'test1', 'checked'),
 ('HO', 'HEAD OFFICE', 'shehan.k', 'unchecked'),
 ('HO', 'HEAD OFFICE', 'test1', 'unchecked'),
-('DUMMY', 'DUMMY', 'shehan.k', 'checked'),
-('DUMMY', 'DUMMY', 'test1', 'checked'),
-('DUMMY1', 'DUMMY1', 'shehan.k', 'unchecked'),
-('DUMMY2', 'DUMMY2', 'shehan.k', 'unchecked'),
-('DUMMY3', 'DUMMY3', 'shehan.k', 'unchecked'),
-('DUMMY4', 'DUMMY4', 'shehan.k', 'unchecked'),
-('DUMMY5', 'DUMMY5', 'shehan.k', 'unchecked'),
-('DUMMY6', 'DUMMY6', 'shehan.k', 'unchecked'),
-('DUMMY7', 'DUMMY7', 'shehan.k', 'unchecked'),
-('DUMMY8', 'DUMMY8', 'shehan.k', 'unchecked'),
-('DUMMY9', 'DUMMY9', 'shehan.k', 'unchecked'),
-('DUMMY11', 'DUMMY11', 'shehan.k', 'unchecked'),
-('DUMMY22', 'DUMMY22', 'shehan.k', 'unchecked'),
-('DUMMY33', 'DUMMY33', 'shehan.k', 'unchecked'),
-('DUMMY44', 'DUMMY44', 'shehan.k', 'unchecked'),
-('DUMMY55', 'DUMMY55', 'shehan.k', 'unchecked'),
-('DUMMY66', 'DUMMY66', 'shehan.k', 'unchecked'),
-('DUMMY77', 'DUMMY77', 'shehan.k', 'unchecked'),
 ('KEKIRAWA_THALAWA', 'KEKIRAWA - THALAWA', 'shehan.k', 'unchecked'),
 ('KEKIRAWA_THALAWA', 'KEKIRAWA - THALAWA', 'test1', 'checked'),
 ('KEKIRAWA_THALAWA', 'KEKIRAWA - THALAWA', 'test2', 'checked'),
 ('WERAGANTOTA', 'WERAGANTOTA RANDENIGALA (0+000 - 2+500 KM)', 'test2', 'checked'),
 ('NIKAWERATIYA', 'NIKAWERATIYA', 'shehan.k', 'unchecked'),
-('DEHIATHTHAKANDIYA', 'DEHIATHTHAKANDIYA P14 & P15', 'pubudu.h', 'checked'),
-('DUMMY', 'DUMMY', 'pubudu.h', 'unchecked');
+('DEHIATHTHAKANDIYA', 'DEHIATHTHAKANDIYA P14 & P15', 'pubudu.h', 'checked');
 
 --
 -- Indexes for dumped tables
