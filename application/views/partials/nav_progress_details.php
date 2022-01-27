@@ -340,12 +340,13 @@
 
                               <div class="row">
             
-
+                              
             <?php
                             if ($project_image_fetch_data_none->num_rows() > 0) {
 
                               ?>
                               <!-- <h4 style="color:#337ab7;"><center><b>None</b></center></h4> -->
+                              <h4 style="color:#337ab7;"><center><b>Both Side</b></center></h4>
 
                               <?php
 
@@ -353,13 +354,13 @@
                                 ?>
                                 <?php if ($row->UserName == $this->session->userdata('username')) { ?>
 
-                                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 thumb">
+                                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 thumb">
 
                                   <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="<?php echo $row->ProjectCode ?> <?php echo $row->LocationCode ?> <?php echo $row->ImgDate ?>"
                                     data-image="<?php echo $row->Image ?>"
                                     data-target="#image-gallery">
 
-                                    <img class="img-thumbnail" style="width:400px; height:400px;"
+                                    <img class="img-thumbnail" style="width:1200px; height:400px;"
                                     src="<?php echo $row->Image ?>"
                                     alt="Another alt text">
 
