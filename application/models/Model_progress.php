@@ -7,8 +7,8 @@ class Model_progress extends CI_Model
     {
 
         // $UserName = $this->session->userdata('username');
-        // date_default_timezone_set('Asia/Colombo');
-        // $Date = date('m-d-Y H:i:s', time());
+        date_default_timezone_set('Asia/Colombo');
+        $Date = date('m-d-Y H:i:s', time());
         
 
         $data = array(
