@@ -356,7 +356,7 @@
 
                                   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 thumb">
 
-                                  <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="<?php echo $row->ProjectCode ?> <?php echo $row->LocationCode ?> <?php echo $row->ImgDate ?>"
+                                  <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="<?php echo $row->Remark ?> <?php echo $row->ImgDate ?>"
                                     data-image="<?php echo $row->Image ?>"
                                     data-target="#image-gallery">
 
