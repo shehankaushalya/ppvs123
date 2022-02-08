@@ -6,11 +6,14 @@ class Model_progress extends CI_Model
     function insertProgressData()
     {
 
-        date_default_timezone_set('Asia/Colombo');
-        $date=date('Y-m-d_H:i:s');
+        // $UserName = $this->session->userdata('username');
+        // date_default_timezone_set('Asia/Colombo');
+        // $Date = date('m-d-Y H:i:s', time());
+        
 
         $data = array(
 
+            
             // 'PpdCode' => date('Y-m-d_H:i:s'),
             'ProjectCode' => $this->input->post('projectcode', true),
             'LocationCode' => $this->input->post('locationcode', true),
@@ -22,6 +25,9 @@ class Model_progress extends CI_Model
             'ImgDate' => $this->input->post('imgdate', true),
             'PpdCode' => $this->input->post('projectcode') . "_" . date('Y-m-d_H:i:s'),
             'Remark' => $this->input->post('remark', true),
+
+            // 'ModifiedDate' => date('Y-m-d_H:i:s'),
+            // 'ModifiedBy' => $UserName,
 
         );
 
@@ -117,10 +123,10 @@ class Model_progress extends CI_Model
          PhotoItem ='$PhotoItem', WorkSide ='$WorkSide', ImgDate='$ImgDate', Remark='$Remark' where PpdCode='$PpdCode' ");
     }
 
-    public function update_image_records($PpdCode, $file_path)
+    public function update_image_records($PpdCode, $file_path, $UserName, $Date)
     {
 
-        $this->db->query("update progressmaster set Image='$file_path' where PpdCode='$PpdCode' ");
+        $this->db->query("update progressmaster set Image='$file_path', UploadBy='$UserName', UploadDate='$Date' where PpdCode='$PpdCode' ");
     }
 
 

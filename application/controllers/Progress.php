@@ -102,6 +102,11 @@ class Progress extends CI_Controller
 
     public function registerImage()
     {
+        $UserName = $this->session->userdata('username');
+        date_default_timezone_set('Asia/Colombo');
+        $Date = date('m-d-Y H:i:s', time());
+
+
         $PpdCode = $this->input->post('D_V_PpdCode');
         $config['allowed_types'] = 'jpg|jpeg|png'; 
         $config['upload_path'] = './uploads/images/';
@@ -118,7 +123,7 @@ class Progress extends CI_Controller
             $file_path = base_url().'/uploads/images/'.$upload_data['file_name'];
             $this->load->model('Model_progress');
 
-            $this->Model_progress->update_image_records($PpdCode, $file_path);
+            $this->Model_progress->update_image_records($PpdCode, $file_path, $UserName, $Date);
             $this->session->set_flashdata('msg', 'Inserted Successfully.');
             redirect('Progress/progresses');
             
@@ -146,6 +151,11 @@ class Progress extends CI_Controller
 
     public function updatedata()
     {
+
+        // $UserName = $this->session->userdata('username');
+        // date_default_timezone_set('Asia/Colombo');
+        // $Date = date('m-d-Y H:i:s', time());
+
 
         $PpdCode = $this->input->post('PpdCode');
         $ProjectCode = $this->input->post('ProjectCode');

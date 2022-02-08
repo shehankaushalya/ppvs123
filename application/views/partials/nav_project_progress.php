@@ -822,6 +822,8 @@ $(function() {
                                              <th data-field="Image">Image</th>
                                              <th data-field="ImgDate">Photo Capturing Date</th>
                                              <th data-field="Remark">Remark</th>
+                                             <th data-field="ModifiedBy">Image Upload By</th>
+                                             <th data-field="ModifiedDate">Image Upload Date</th>
                                              
 
 
@@ -859,6 +861,10 @@ $(function() {
                                              <td><?php echo $row->ImgDate  ?></td>
 
                                              <td><?php echo $row->Remark  ?></td>
+
+                                             <td><?php echo $row->UploadBy  ?></td>
+
+                                             <td><?php echo $row->UploadDate  ?></td>
 
 
 
