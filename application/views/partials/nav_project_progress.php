@@ -1012,7 +1012,7 @@ for (var i = 2; i < table.rows.length; i++) {
         document.getElementById("D_D_Remark").value = this.cells[7].innerHTML;
 
 
-        document.getElementById("Upload_Image").value = this.cells[5].innerHTML;
+        // document.getElementById("Upload_Image").value = this.cells[5].innerHTML;
 
 
     };
