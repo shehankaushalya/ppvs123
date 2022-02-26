@@ -534,11 +534,21 @@ $(function() {
                                                                                      <div
                                                                                          class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
                                                                                          <div class="login-horizental">
-                                                                                            
-                                                                                            <?php if("a"=="b") {?>
-                                                                                            <input type="submit" value="Add Image" class="btn btn-sm btn-primary login-submit-cs" />
-                                                                                            <?php } ?>
 
+                                                                                         <?php   foreach ($progress_fetch_data->result() as $row)  
+         {  
+            ?>
+            <?php if ($row->UserName == $this->session->userdata('username')) { ?>
+            <?php if (!empty($row->Image)) { ?>
+                <input type="submit" value="Add Image" class="btn btn-sm btn-primary login-submit-cs" />                  
+                                                    <?php } ?>
+           
+           
+                                                    <?php } ?>  
+         <?php } ?>  
+
+                                                                                            
+                                                                                           
                                                                                              <a data-dismiss="modal"
                                                                                                  href="#"><button
                                                                                                      class="btn btn-sm btn-primary login-submit-cs"
@@ -994,7 +1004,7 @@ $(function() {
                                             } else {
                                                 ?>
                                          <tr>
-                                             <td colspan="8"> No Data Found </td>
+                                             <td colspan="10"> No Data Found </td>
                                          </tr>
                                          <?php
                                             }
@@ -1129,7 +1139,7 @@ for (var i = 2; i < table.rows.length; i++) {
         document.getElementById("D_D_Remark").value = this.cells[7].innerHTML;
 
 
-        // document.getElementById("Upload_Image").value = this.cells[5].innerHTML;
+        document.getElementById("Upload_Image").value = this.cells[5].innerHTML;
 
 
     };
