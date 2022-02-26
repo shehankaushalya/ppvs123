@@ -110,6 +110,8 @@ class User extends CI_Controller
 
                         'ImageUpload' => $result->ImageUpload,
 
+                        'ManualImageUpload' => $result->ManualImageUpload,
+
                         'loggedin' => true
                     );
                     $this->session->set_userdata($user_data);
@@ -166,6 +168,8 @@ class User extends CI_Controller
         $this->session->unset_userdata('ProgressDelete');
 
         $this->session->unset_userdata('ImageUpload');
+
+        $this->session->unset_userdata('ManualImageUpload');
 
 
 

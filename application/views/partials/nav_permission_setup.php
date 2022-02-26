@@ -272,7 +272,9 @@ button.btn.btn-link {
 
                                             <th colspan=4 data-field="progress">Project Progress</th>
 
-                                            <th rowspan=2 data-field="upload">Upload Image</th>
+                                            <th rowspan=2 data-field="upload">upload Image</th>
+
+                                            <th rowspan=2 data-field="manual">Manual Image Upload</th>
 
 
                                         </tr>
@@ -448,6 +450,13 @@ button.btn.btn-link {
                                                         onclick="function1(this,'ImageUpload','<?php echo $row->UserName  ?>')"
                                                         value="<?php echo $row->UserName  ?>"
                                                         <?php echo  $row->ImageUpload ?>><i></i> </td>
+
+
+                                                
+                                                <td><input type="checkbox" name="ManualImageUpload[]" id="ManualImageUpload"
+                                                        onclick="function1(this,'ManualImageUpload','<?php echo $row->UserName  ?>')"
+                                                        value="<?php echo $row->UserName  ?>"
+                                                        <?php echo  $row->ManualImageUpload ?>><i></i> </td>
 
 
 

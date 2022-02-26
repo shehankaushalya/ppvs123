@@ -135,6 +135,41 @@ class Progress extends CI_Controller
         
     }
 
+    public function registerImageManual()
+    {
+        $UserName = $this->session->userdata('username');
+        date_default_timezone_set('Asia/Colombo');
+        $Date = date('m-d-Y H:i:s', time());
+
+
+        $PpdCode = $this->input->post('V_V_PpdCode');
+        $config['allowed_types'] = 'jpg|jpeg|png'; 
+        $config['upload_path'] = './uploads/images/';
+        $config['max_size'] = 1024;
+        // $config['max_width'] = 1000;
+        // $config['max_height'] = 1000; 
+        $this->load->library('upload',$config); 
+
+        if($this->upload->do_upload('image')){ 
+            
+            // $data = array('upload_data' => $this->upload->data());
+            
+            $upload_data = $this->upload->data();
+            $file_path = base_url().'/uploads/images/'.$upload_data['file_name'];
+            $this->load->model('Model_progress');
+
+            $this->Model_progress->update_image_records($PpdCode, $file_path, $UserName, $Date);
+            $this->session->set_flashdata('msg', 'Inserted Successfully.');
+            redirect('Progress/progresses');
+            
+         }else{ 
+            $this->session->set_flashdata('errmsg', 'Something Went Wrong');
+            redirect('Progress/progressView');
+         } 
+        
+        
+    }
+
     
 
     public function progressView()
