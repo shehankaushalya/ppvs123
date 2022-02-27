@@ -955,16 +955,16 @@ $(function() {
                                              
                                              
                                              <td>
-                                             <a style="font-size:12px;color:#337ab7" data-toggle="modal"
+                                                    <?php if (!empty($row->Image)) { ?>
+                                                    <a style="font-size:12px;color:#337ab7" data-toggle="modal"
                                                     href="#display-image" title="View Image"
                                                     class="display-emp ml-1 btn-ext-small btn btn-sm btn-link"
                                                     data-geteid="<?php echo $row->Image ?>"
-                                                    rel="noopener noreferrer">
-                                                    <?php if (!empty($row->Image)) { ?>
-                                                    View</a>
+                                                    rel="noopener noreferrer">View</a>
+                                                    
                                                     <?php } else if ($this->session->userdata('ImageUpload') == "checked") { ?>
-                                                        <a style="font-size:12px;color:#337ab7" href="#zoomInDown5" ><button type =button value='Image Upload' class="btn btn-link"
-                                                         data-toggle="modal" data-target="#zoomInDown5"> Image Upload</button></a>
+                                                    <a style="font-size:12px;color:#337ab7" href="#zoomInDown5" ><button type =button value='Image Upload' class="btn btn-link"
+                                                    data-toggle="modal" data-target="#zoomInDown5"> Image Upload</button></a>
                                                     <?php } ?>
                                              </td>
                                              
