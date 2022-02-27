@@ -956,7 +956,7 @@ $(function() {
                                              
                                              <td>
                                              <a style="font-size:12px;color:#337ab7" data-toggle="modal"
-                                                    href="#dispaly-employee" title="View Image"
+                                                    href="#display-image" title="View Image"
                                                     class="display-emp ml-1 btn-ext-small btn btn-sm btn-link"
                                                     data-geteid="<?php echo $row->Image ?>"
                                                     rel="noopener noreferrer">
@@ -1143,7 +1143,7 @@ $('.js-example-basic-multiple').select2();
 
 <!--image rotation function is included-->
 
-    <div class="modal fade rotate" id="dispaly-employee" style="display:none;">
+    <div class="modal fade rotate" id="display-image" style="display:none;">
         <div class="modal-dialog" id="EditRecord">
             <div class="modal-content panel panel-primary">
 
