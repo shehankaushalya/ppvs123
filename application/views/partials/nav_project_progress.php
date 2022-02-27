@@ -962,7 +962,7 @@ $(function() {
                                                     rel="noopener noreferrer">
                                                     <?php if (!empty($row->Image)) { ?>
                                                     View</a>
-                                                    <?php } else { ?>
+                                                    <?php } else if ($this->session->userdata('ImageUpload') == "checked") { ?>
                                                         <a style="font-size:12px;color:#337ab7" href="#zoomInDown5" ><button type =button value='Image Upload' class="btn btn-link"
                                                          data-toggle="modal" data-target="#zoomInDown5"> Image Upload</button></a>
                                                     <?php } ?>
