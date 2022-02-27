@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 25, 2022 at 06:41 AM
+-- Generation Time: Feb 27, 2022 at 11:13 AM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 8.0.3
 
@@ -103,9 +103,11 @@ CREATE TABLE `progressmaster` (
   `LocationCode` varchar(100) NOT NULL,
   `PhotoItem` varchar(100) DEFAULT NULL,
   `WorkSide` varchar(100) NOT NULL,
-  `Image` varchar(100) NOT NULL,
+  `Image` varchar(100) DEFAULT NULL,
   `ImgDate` varchar(100) NOT NULL,
-  `Remark` varchar(100) NOT NULL
+  `Remark` varchar(100) NOT NULL,
+  `UploadBy` varchar(50) NOT NULL,
+  `UploadDate` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -175,18 +177,19 @@ CREATE TABLE `usermaster` (
   `ProgressView` varchar(10) NOT NULL,
   `ProgressEdit` varchar(10) NOT NULL,
   `ProgressDelete` varchar(10) NOT NULL,
-  `ImageUpload` varchar(10) NOT NULL
+  `ImageUpload` varchar(10) NOT NULL,
+  `ManualImageUpload` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `usermaster`
 --
 
-INSERT INTO `usermaster` (`UserName`, `Name`, `Password`, `RefProject`, `Position`, `ContactNumber`, `Status`, `ProjectNew`, `ProjectView`, `ProjectEdit`, `ProjectDelete`, `UserNew`, `UserView`, `UserEdit`, `UserDelete`, `UserBlock`, `LocationNew`, `LocationEdit`, `LocationView`, `LocationDelete`, `PermissionSetup`, `ProjectAssign`, `ResetPassword`, `PermissionGrant`, `UserAssign`, `ProgressNew`, `ProgressView`, `ProgressEdit`, `ProgressDelete`, `ImageUpload`) VALUES
-('pubudu.h', 'Pubudu Harischandra', '8cb2237d0679ca88db6464eac60da96345513964', '', 'Project Manager', '1234567890', 'ACTIVE', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'YES', 'YES', 'checked', 'checked', 'checked', 'checked', 'checked'),
-('shehan.k', 'Shehan Kaushalya', '8cb2237d0679ca88db6464eac60da96345513964', '', 'Headoffice User', '0714519639', 'Active    ', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'YES', 'YES', 'checked', 'checked', 'checked', 'checked', 'checked'),
-('test1', 'test', '8cb2237d0679ca88db6464eac60da96345513964', '', 'Other', '1234567890', 'Active    ', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'YES', 'YES', 'checked', 'checked', 'checked', 'checked', ''),
-('test2', 'test2', '8cb2237d0679ca88db6464eac60da96345513964', '', 'Head Office User', '1234567890', 'ACTIVE', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'YES', 'YES', 'checked', 'checked', 'checked', 'checked', '');
+INSERT INTO `usermaster` (`UserName`, `Name`, `Password`, `RefProject`, `Position`, `ContactNumber`, `Status`, `ProjectNew`, `ProjectView`, `ProjectEdit`, `ProjectDelete`, `UserNew`, `UserView`, `UserEdit`, `UserDelete`, `UserBlock`, `LocationNew`, `LocationEdit`, `LocationView`, `LocationDelete`, `PermissionSetup`, `ProjectAssign`, `ResetPassword`, `PermissionGrant`, `UserAssign`, `ProgressNew`, `ProgressView`, `ProgressEdit`, `ProgressDelete`, `ImageUpload`, `ManualImageUpload`) VALUES
+('pubudu.h', 'Pubudu Harischandra', '8cb2237d0679ca88db6464eac60da96345513964', '', 'Project Manager', '1234567890', 'ACTIVE', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'YES', 'YES', 'checked', 'checked', 'checked', 'checked', 'checked', 'unchecked'),
+('shehan.k', 'Shehan Kaushalya', '8cb2237d0679ca88db6464eac60da96345513964', '', 'Headoffice User', '0714519639', 'Active    ', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'YES', 'YES', 'checked', 'checked', 'checked', 'checked', 'checked', 'unchecked'),
+('test1', 'test', '8cb2237d0679ca88db6464eac60da96345513964', '', 'Other', '1234567890', 'Active    ', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'checked', 'YES', 'YES', 'unchecked', 'checked', 'checked', 'checked', 'unchecked', 'checked'),
+('test2', 'test2', '8cb2237d0679ca88db6464eac60da96345513964', '', 'Head Office User', '1234567890', 'ACTIVE', 'unchecked', 'checked', 'unchecked', 'unchecked', 'unchecked', 'checked', 'unchecked', 'unchecked', 'unchecked', 'unchecked', 'unchecked', 'checked', 'unchecked', 'unchecked', 'unchecked', 'unchecked', 'YES', 'YES', 'unchecked', 'checked', 'unchecked', 'unchecked', '', '');
 
 -- --------------------------------------------------------
 
@@ -216,7 +219,7 @@ INSERT INTO `userproject` (`ProjectCode`, `ProjectName`, `UserName`, `status`) V
 ('MAHIYANGANAYA', 'MAHIYANGANAYA P19 & P23', 'shehan.k', 'unchecked'),
 ('DEHIATHTHAKANDIYA', 'DEHIATHTHAKANDIYA P14 & P15', 'shehan.k', 'checked'),
 ('CEP-2/PK-C', 'CENTRALEXPRSSWAY(57+000-62+330KM&63+950-69+500KM)', 'test1', 'unchecked'),
-('DEHIATHTHAKANDIYA', 'DEHIATHTHAKANDIYA P14 & P15', 'test1', 'unchecked'),
+('DEHIATHTHAKANDIYA', 'DEHIATHTHAKANDIYA P14 & P15', 'test1', 'checked'),
 ('IROAD_JAFFNA', 'JAFFNA - I ROAD -04', 'test1', 'unchecked'),
 ('KIRIMETIYA', 'KIRIMETIYA ROAD (0+000 - 4+000) KM', 'test1', 'unchecked'),
 ('KULIYAPITIYA', 'KULIYAPITIYA - PADIWELA', 'test1', 'unchecked'),
@@ -231,7 +234,8 @@ INSERT INTO `userproject` (`ProjectCode`, `ProjectName`, `UserName`, `status`) V
 ('KEKIRAWA_THALAWA', 'KEKIRAWA - THALAWA', 'test2', 'checked'),
 ('WERAGANTOTA', 'WERAGANTOTA RANDENIGALA (0+000 - 2+500 KM)', 'test2', 'checked'),
 ('NIKAWERATIYA', 'NIKAWERATIYA', 'shehan.k', 'unchecked'),
-('DEHIATHTHAKANDIYA', 'DEHIATHTHAKANDIYA P14 & P15', 'pubudu.h', 'checked');
+('DEHIATHTHAKANDIYA', 'DEHIATHTHAKANDIYA P14 & P15', 'pubudu.h', 'checked'),
+('DEHIATHTHAKANDIYA', 'DEHIATHTHAKANDIYA P14 & P15', 'test2', 'checked');
 
 --
 -- Indexes for dumped tables

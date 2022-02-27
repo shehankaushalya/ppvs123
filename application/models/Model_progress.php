@@ -191,14 +191,14 @@ class Model_progress extends CI_Model
         // $query = $this->db->query("SELECT DISTINCT progressmaster.ProjectCode FROM progressmaster LEFT JOIN userproject ON progressmaster.ProjectCode=userproject.ProjectCode where userproject.status='checked'");
         // return $query;
 
-        $query = $this->db->query("SELECT DISTINCT progressmaster.ProjectCode, userproject.UserName FROM progressmaster LEFT JOIN userproject ON progressmaster.ProjectCode=userproject.ProjectCode where userproject.status='checked'");
+        $query = $this->db->query("SELECT DISTINCT progressmaster.ProjectCode, userproject.UserName FROM progressmaster LEFT JOIN userproject ON progressmaster.ProjectCode=userproject.ProjectCode where userproject.status='checked' && progressmaster.Image IS NOT NULL");
         return $query;
     }
 
     function project_location_fetch_data($item_code, $project_code)
     {
         
-        $query = $this->db->query("SELECT DISTINCT progressmaster.LocationCode, progressmaster.ProjectCode, locationsubmaster.Status, locationsubmaster.Description, userproject.UserName FROM progressmaster INNER JOIN locationsubmaster ON progressmaster.LocationCode=locationsubmaster.LocationCode INNER JOIN userproject ON progressmaster.ProjectCode=userproject.ProjectCode where userproject.status='checked' && progressmaster.ProjectCode='$project_code' && progressmaster.PhotoItem='$item_code'");
+        $query = $this->db->query("SELECT DISTINCT progressmaster.LocationCode, progressmaster.ProjectCode, locationsubmaster.Status, locationsubmaster.Description, userproject.UserName FROM progressmaster INNER JOIN locationsubmaster ON progressmaster.LocationCode=locationsubmaster.LocationCode INNER JOIN userproject ON progressmaster.ProjectCode=userproject.ProjectCode where userproject.status='checked' && progressmaster.ProjectCode='$project_code' && progressmaster.PhotoItem='$item_code' && progressmaster.Image IS NOT NULL");
         return $query;
 
         // $query = $this->db->query("SELECT * FROM progressmaster LEFT JOIN userproject ON progressmaster.ProjectCode=userproject.ProjectCode where userproject.status='checked' && progressmaster.ProjectCode='$project_code' && progressmaster.PhotoItem='$item_code' && progressmaster.ImgDate IN (SELECT MAX(progressmaster.ImgDate) FROM progressmaster) GROUP BY progressmaster.LocationCode");
