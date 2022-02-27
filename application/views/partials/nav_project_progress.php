@@ -987,7 +987,7 @@ $(function() {
                                             } else {
                                                 ?>
                                          <tr>
-                                             <td colspan="8"> No Data Found </td>
+                                             <td colspan="10"> No Data Found </td>
                                          </tr>
                                          <?php
                                             }
