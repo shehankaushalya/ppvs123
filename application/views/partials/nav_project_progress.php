@@ -913,7 +913,7 @@ $(function() {
                                  <table id="table" class="table table-striped table-bordered" style="width:100%">
                                      <thead>
                                          <tr>
-                                             <td colspan="8">
+                                             <td colspan="10">
                                                  <h4 id="topic" style="color:#337ab7;">Project Progress Details</h4>
                                              </td>
                                          </tr>
