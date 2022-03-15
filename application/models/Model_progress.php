@@ -210,14 +210,14 @@ class Model_progress extends CI_Model
 
     function project_image_fetch_data_none($item_code, $project_code, $location_code)
     {
-        $query = $this->db->query("SELECT * FROM progressmaster LEFT JOIN userproject ON progressmaster.ProjectCode=userproject.ProjectCode where userproject.status='checked' && progressmaster.ProjectCode='$project_code' && progressmaster.PhotoItem='$item_code' && progressmaster.LocationCode='$location_code' && progressmaster.WorkSide='None' && progressmaster.Image IS NOT NULL");
+        $query = $this->db->query("SELECT * FROM progressmaster LEFT JOIN userproject ON progressmaster.ProjectCode=userproject.ProjectCode where userproject.status='checked' && progressmaster.ProjectCode='$project_code' && progressmaster.PhotoItem='$item_code' && progressmaster.LocationCode='$location_code' && progressmaster.WorkSide='None' && progressmaster.Image IS NOT NULL ORDER BY progressmaster.ImgDate ASC");
         return $query;
         // $query = $this->db->query("SELECT DISTINCT progressmaster.ProjectCode, progressmaster.LocationCode, progressmaster.Image, progressmaster.ImgDate, userproject.UserName FROM progressmaster LEFT JOIN userproject ON progressmaster.ProjectCode=userproject.ProjectCode where userproject.status='checked' && progressmaster.ProjectCode='$project_code' && progressmaster.PhotoItem='$item_code' && progressmaster.LocationCode='$location_code'");
         // return $query;
     }
     function project_image_fetch_data_lhs($item_code, $project_code, $location_code)
     {
-        $query = $this->db->query("SELECT * FROM progressmaster LEFT JOIN userproject ON progressmaster.ProjectCode=userproject.ProjectCode where userproject.status='checked' && progressmaster.ProjectCode='$project_code' && progressmaster.PhotoItem='$item_code' && progressmaster.LocationCode='$location_code' && progressmaster.WorkSide='LHS' && progressmaster.Image IS NOT NULL");
+        $query = $this->db->query("SELECT * FROM progressmaster LEFT JOIN userproject ON progressmaster.ProjectCode=userproject.ProjectCode where userproject.status='checked' && progressmaster.ProjectCode='$project_code' && progressmaster.PhotoItem='$item_code' && progressmaster.LocationCode='$location_code' && progressmaster.WorkSide='LHS' && progressmaster.Image IS NOT NULL ORDER BY progressmaster.ImgDate ASC");
         return $query;
         // $query = $this->db->query("SELECT DISTINCT progressmaster.ProjectCode, progressmaster.LocationCode, progressmaster.Image, progressmaster.ImgDate, userproject.UserName FROM progressmaster LEFT JOIN userproject ON progressmaster.ProjectCode=userproject.ProjectCode where userproject.status='checked' && progressmaster.ProjectCode='$project_code' && progressmaster.PhotoItem='$item_code' && progressmaster.LocationCode='$location_code'");
         // return $query;
@@ -226,7 +226,7 @@ class Model_progress extends CI_Model
 
     function project_image_fetch_data_rhs($item_code, $project_code, $location_code)
     {
-        $query = $this->db->query("SELECT * FROM progressmaster LEFT JOIN userproject ON progressmaster.ProjectCode=userproject.ProjectCode where userproject.status='checked' && progressmaster.ProjectCode='$project_code' && progressmaster.PhotoItem='$item_code' && progressmaster.LocationCode='$location_code' && progressmaster.WorkSide='RHS' && progressmaster.Image IS NOT NULL");
+        $query = $this->db->query("SELECT * FROM progressmaster LEFT JOIN userproject ON progressmaster.ProjectCode=userproject.ProjectCode where userproject.status='checked' && progressmaster.ProjectCode='$project_code' && progressmaster.PhotoItem='$item_code' && progressmaster.LocationCode='$location_code' && progressmaster.WorkSide='RHS' && progressmaster.Image IS NOT NULL ORDER BY progressmaster.ImgDate ASC");
         return $query;
         // $query = $this->db->query("SELECT DISTINCT progressmaster.ProjectCode, progressmaster.LocationCode, progressmaster.Image, progressmaster.ImgDate, userproject.UserName FROM progressmaster LEFT JOIN userproject ON progressmaster.ProjectCode=userproject.ProjectCode where userproject.status='checked' && progressmaster.ProjectCode='$project_code' && progressmaster.PhotoItem='$item_code' && progressmaster.LocationCode='$location_code'");
         // return $query;
